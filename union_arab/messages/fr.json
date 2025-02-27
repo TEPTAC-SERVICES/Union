@@ -1,0 +1,96 @@
+{
+  "HomePage": {
+    "Hero": {
+      "title": "Fédération Arabe des Petites Entreprises",
+      "subtitle": "Nous permettons aux petites entreprises de prospérer et de croître dans le monde arabe.",
+      "button1": "Découvrir Plus",
+      "button2": "Rejoignez-nous maintenant"
+    },
+    "news": {
+      "title1": "Dernières ",
+      "title2": "Nouvelles",
+      "button": "Voir Plus"
+    },
+    "details": {
+      "vision": {
+        "title": "Notre Vision",
+        "content": "Créer un environnement prospère et favorable aux petites entreprises dans les pays arabes, contribuant au développement économique durable"
+      },
+      "message": {
+        "title": "Notre Mission",
+        "content": "Autonomiser les petites entreprises grâce à un soutien financier et technique, améliorer la communication entre entrepreneurs et investisseurs, et fournir des opportunités de formation et de financement pour stimuler leur croissance."
+      },
+      "goals": {
+        "title": "Nos Objectifs",
+        "content": {
+          "1": "Promouvoir la culture entrepreneuriale.",
+          "2": "Fournir des consultations financières et administratives aux propriétaires de petites entreprises.",
+          "3": "Faciliter l'accès aux sources de financement.",
+          "4": "Soutenir les politiques favorables aux petites entreprises.",
+          "5": "Établir des partenariats stratégiques pour améliorer l'environnement des affaires."
+        }
+      },
+      "values": {
+        "title": "Nos Valeurs",
+        "content": {
+          "1": "Collaboration : Offrir un espace de connexion et de partage d'expériences pour les petites entreprises.",
+          "2": "Soutien Mutuel : Mettre en place un système de contributions et de dons pour soutenir les projets.",
+          "3": "Innovation : Développer une plateforme numérique moderne avec intégration de technologies d'IA."
+        }
+      }
+    },
+    "testimonial": {
+      "title1": "On Parle",
+      "title2": "De Nous",
+      "content": [
+        {
+          "name": "Mohamed Al-Arabi",
+          "position": "Entrepreneur",
+          "quote": "La Fédération a contribué à développer mon idée et à en faire un projet réussi."
+        },
+        {
+          "name": "Sara Al-Arabi",
+          "position": "Entrepreneure",
+          "quote": "La Fédération fournit le soutien financier et technique nécessaire à la réussite des petites entreprises."
+        },
+        {
+          "name": "Ahmed Al-Arabi",
+          "position": "Entrepreneur",
+          "quote": "La Fédération offre un environnement encourageant pour les petites entreprises."
+        }
+      ]
+    },
+    "download": {
+      "title": "Téléchargez Notre Application",
+      "content": "Découvrez les fonctionnalités de notre application spécialement conçue pour répondre à vos besoins quotidiens.",
+      "button1": {
+        "title": "Obtenez-le maintenant",
+        "content": "Google Play Store"
+      },
+      "button2": {
+        "title": "Télécharger maintenant",
+        "content": "Apple Store"
+      }
+    }
+  },
+  "Navbar": {
+    "home": "Accueil",
+    "organization": "Organisation",
+    "membership": "Adhésion",
+    "activities": "Activités",
+    "financing": "Financement",
+    "documents": "Documents",
+    "contact us": "Contactez-nous",
+    "login": "Connexion",
+    "register": "Inscription",
+    "documents_about": "Documents sur l'Union",
+    "annual_reports": "Rapports Annuels",
+    "financial_reports": "Rapports Financiers",
+    "law": "Loi Fondamentale",
+    "info_financing": "Informations sur le Financement"
+  },
+  "footer": {
+    "title": "Union Arabe des Petites Entreprises",
+    "content": "Tous droits réservés"
+  }
+}

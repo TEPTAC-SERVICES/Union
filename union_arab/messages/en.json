@@ -1,0 +1,96 @@
+{
+  "HomePage": {
+    "Hero": {
+      "title": "Arab Small Business Federation",
+      "subtitle": "We empower small businesses to thrive and grow in the Arab world.",
+      "button1": "Discover More",
+      "button2": "Join Us Now"
+    },
+    "news": {
+      "title1": "Latest ",
+      "title2": "News",
+      "button": "Read More"
+    },
+    "details": {
+      "vision": {
+        "title": "Our Vision",
+        "content": "To create a thriving and supportive environment for small enterprises in Arab countries, contributing to sustainable economic development"
+      },
+      "message": {
+        "title": "Our Mission",
+        "content": "Empowering small businesses through financial and technical support, enhancing communication between entrepreneurs and investors, and providing training and funding opportunities to boost their growth."
+      },
+      "goals": {
+        "title": "Our Goals",
+        "content": {
+          "1": "Promote entrepreneurship culture.",
+          "2": "Provide financial and administrative consultations for small business owners.",
+          "3": "Facilitate access to funding sources.",
+          "4": "Support policies favoring small businesses.",
+          "5": "Establish strategic partnerships to enhance the business environment."
+        }
+      },
+      "values": {
+        "title": "Our Values",
+        "content": {
+          "1": "Collaboration: Providing a space for small enterprises to connect and share experiences.",
+          "2": "Mutual Support: Offering a system for contributions and donations to support projects.",
+          "3": "Innovation: Developing a modern digital platform with AI technology integration."
+        }
+      }
+    },
+    "testimonial": {
+      "title1": "Stories",
+      "title2": "About Us",
+      "content": [
+        {
+          "name": "Mohamed Al-Arabi",
+          "position": "Entrepreneur",
+          "quote": "The Federation helped develop my idea and turn it into a successful project."
+        },
+        {
+          "name": "Sara Al-Arabi",
+          "position": "Entrepreneur",
+          "quote": "The Federation provides the financial and technical support needed for small business success."
+        },
+        {
+          "name": "Ahmed Al-Arabi",
+          "position": "Entrepreneur",
+          "quote": "The Federation offers an encouraging environment for small businesses."
+        }
+      ]
+    },
+    "download": {
+      "title": "Download Our App Now",
+      "content": "Discover features of our app specifically designed to meet your daily needs.",
+      "button1": {
+        "title": "Get It Now",
+        "content": "Google Play Store"
+      },
+      "button2": {
+        "title": "Download Now",
+        "content": "Apple Store"
+      }
+    }
+  },
+  "Navbar": {
+    "home": "Home",
+    "organization": "Organization",
+    "membership": "Membership",
+    "activities": "Activities",
+    "financing": "Financing",
+    "documents": "Documents",
+    "contact us": "Contact Us",
+    "login": "Login",
+    "register": "Register",
+    "documents_about": "Documents About the Union",
+    "annual_reports": "Annual Reports",
+    "financial_reports": "Financial Reports",
+    "law": "Basic Law",
+    "info_financing": "Financing Information"
+  },
+  "footer": {
+    "title": "Arab Union for Small Enterprises",
+    "content": "All rights reserved"
+  }
+}
