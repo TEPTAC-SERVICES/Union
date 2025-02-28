@@ -1,14 +1,10 @@
 import createNextIntlPlugin from 'next-intl/plugin';
-import type { NextConfig } from "next";
-
+ 
 const withNextIntl = createNextIntlPlugin();
  
 /** @type {import('next').NextConfig} */
-const nextConfig: NextConfig = {
-    i18n: {
-      locales: ['en', 'fr', 'es'], // Add your supported locales
-      defaultLocale: 'en',
-    },
+const nextConfig = {
+    
     images: {
       dangerouslyAllowSVG: true,
   
@@ -51,10 +47,16 @@ const nextConfig: NextConfig = {
           pathname: '/**',
           
         },
+        {
+          protocol: 'https',
+          hostname: 'dl.dropboxusercontent.com',
+          port: '',
+          pathname: '/**',
+          
+        },
   
         
       ],
     },
-  };
- 
+  }; 
 export default withNextIntl(nextConfig);
