@@ -1,30 +1,30 @@
 {
   "HomePage": {
     "Hero": {
-      "title": "Fédération Arabe des Petites Entreprises",
+      "title": "Union Arabe des Petites Entreprises",
       "subtitle": "Nous permettons aux petites entreprises de prospérer et de croître dans le monde arabe.",
-      "button1": "Découvrir Plus",
+      "button1": "Découvrir plus",
       "button2": "Rejoignez-nous maintenant"
     },
     "news": {
       "title1": "Dernières ",
       "title2": "Nouvelles",
-      "button": "Voir Plus"
+      "button": "Cliquez pour plus"
     },
     "details": {
       "vision": {
         "title": "Notre Vision",
-        "content": "Créer un environnement prospère et favorable aux petites entreprises dans les pays arabes, contribuant au développement économique durable"
+        "content": "Créer un environnement prospère et favorable aux petites entreprises dans les pays arabes, contribuant au développement économique durable."
       },
       "message": {
         "title": "Notre Mission",
-        "content": "Autonomiser les petites entreprises grâce à un soutien financier et technique, améliorer la communication entre entrepreneurs et investisseurs, et fournir des opportunités de formation et de financement pour stimuler leur croissance."
+        "content": "Permettre aux petites entreprises grâce à un soutien financier et technique, renforcer la communication entre les entrepreneurs et les investisseurs, et fournir des opportunités de formation et de financement pour favoriser leur croissance."
       },
       "goals": {
         "title": "Nos Objectifs",
         "content": {
-          "1": "Promouvoir la culture entrepreneuriale.",
-          "2": "Fournir des consultations financières et administratives aux propriétaires de petites entreprises.",
+          "1": "Promouvoir la culture de l'entrepreneuriat.",
+          "2": "Fournir des conseils financiers et de gestion aux propriétaires de petites entreprises.",
           "3": "Faciliter l'accès aux sources de financement.",
           "4": "Soutenir les politiques favorables aux petites entreprises.",
           "5": "Établir des partenariats stratégiques pour améliorer l'environnement des affaires."
@@ -33,36 +33,36 @@
       "values": {
         "title": "Nos Valeurs",
         "content": {
-          "1": "Collaboration : Offrir un espace de connexion et de partage d'expériences pour les petites entreprises.",
-          "2": "Soutien Mutuel : Mettre en place un système de contributions et de dons pour soutenir les projets.",
-          "3": "Innovation : Développer une plateforme numérique moderne avec intégration de technologies d'IA."
+          "1": "Collaboration : Fournir un espace pour que les petites entreprises communiquent et partagent des expériences.",
+          "2": "Soutien mutuel : Offrir un système de contributions et de dons pour soutenir les projets.",
+          "3": "Innovation : Développer une plateforme numérique moderne avec l'intégration des technologies d'intelligence artificielle."
         }
       }
     },
     "testimonial": {
-      "title1": "On Parle",
-      "title2": "De Nous",
+      "title1": "On parle",
+      "title2": "de nous",
       "content": [
         {
-          "name": "Mohamed Al-Arabi",
+          "name": "Mohamed Al Arabi",
           "position": "Entrepreneur",
-          "quote": "La Fédération a contribué à développer mon idée et à en faire un projet réussi."
+          "quote": "L'Union a contribué au développement de mon idée et à sa transformation en un projet réussi."
         },
         {
-          "name": "Sara Al-Arabi",
-          "position": "Entrepreneure",
-          "quote": "La Fédération fournit le soutien financier et technique nécessaire à la réussite des petites entreprises."
+          "name": "Sarah Al Arabi",
+          "position": "Entrepreneuse",
+          "quote": "L'Union fournit le soutien financier et technique nécessaire à la réussite des petites entreprises."
         },
         {
-          "name": "Ahmed Al-Arabi",
+          "name": "Ahmed Al Arabi",
           "position": "Entrepreneur",
-          "quote": "La Fédération offre un environnement encourageant pour les petites entreprises."
+          "quote": "L'Union offre un environnement encourageant pour les petites entreprises."
         }
       ]
     },
     "download": {
-      "title": "Téléchargez Notre Application",
-      "content": "Découvrez les fonctionnalités de notre application spécialement conçue pour répondre à vos besoins quotidiens.",
+      "title": "Téléchargez notre application maintenant",
+      "content": "Découvrez les avantages de notre application conçue spécialement pour répondre à vos besoins quotidiens.",
       "button1": {
         "title": "Obtenez-le maintenant",
         "content": "Google Play Store"
@@ -84,13 +84,93 @@
     "login": "Connexion",
     "register": "Inscription",
     "documents_about": "Documents sur l'Union",
-    "annual_reports": "Rapports Annuels",
-    "financial_reports": "Rapports Financiers",
-    "law": "Loi Fondamentale",
-    "info_financing": "Informations sur le Financement"
+    "annual_reports": "Rapports annuels",
+    "financial_reports": "Rapports financiers",
+    "law": "Loi fondamentale",
+    "info_financing": "Informations sur le financement"
   },
   "footer": {
     "title": "Union Arabe des Petites Entreprises",
     "content": "Tous droits réservés"
+  },
+  "LoginPage": {
+    "greeting" : "Bon retour",
+    "title" : "Entrez vos identifiants pour accéder à votre compte", 
+    "email" : "E-mail",
+    "password" : "Mot de passe",
+    "button" : "Se connecter",
+    "forgot" : "Mot de passe oublié ?",
+    "register" : "Vous n'avez pas de compte ? Inscrivez-vous maintenant",
+    "email_message": "Veuillez entrer une adresse e-mail valide.",
+    "password_message_1": "Le mot de passe doit contenir au moins 6 caractères.",
+    "password_message_2": "Le mot de passe doit contenir au moins une majuscule, une minuscule et un chiffre.",
+    "toast_success": "Bon retour !", 
+    "toast_success_description" : "Vous êtes connecté avec succès.",
+    "toast_error": "Erreur de connexion. Veuillez vérifier votre e-mail et votre mot de passe."
+  },
+  "RegisterPage": {
+    "step1" : {
+      "title" : "Sélectionnez votre rôle",
+      "subtitle" : "Choisissez le rôle qui vous convient.",
+      "error"  :"Veuillez sélectionner au moins un rôle.",
+      "role1" : "Membre bénéficiaire",
+      "role2" : "Membre actif",
+      "button" : "Suivant"
+    }, 
+    "step2" : {
+      "title" : "Données utilisateur",
+      "subtitle" : "Entrez vos données avec soin.",
+      "firstname" : "Prénom",
+      "firstnameplaceholder" : "Entrez votre prénom",
+      "lastname" : "Nom de famille",
+      "lastnameplaceholder" : "Entrez votre nom de famille",
+      "email" : "E-mail",
+      "emailplaceholder" : "Entrez votre e-mail",
+      "cin"  : "CIN / Passeport",
+      "cinplaceholder" : "Entrez votre numéro CIN ou passeport",
+      "cindescription" : "Fournissez votre numéro de carte d'identité nationale (CIN) ou votre numéro de passeport pour vérification.",
+      "contry" : "Pays",
+      "contryplaceholder" : "Sélectionnez votre pays",
+      "number" : "Numéro de téléphone",
+      "numberplaceholder" : "Entrez votre numéro de téléphone",
+      "number2" : "Numéro de téléphone (optionnel)",
+      "number2placeholder" : "Entrez votre numéro de téléphone (optionnel)",
+      "document" : "Télécharger des documents",
+      "documenttitle" : "Cliquez pour télécharger ou glisser-déposer",
+      "documentsubtitle" : "PDF, DOC, DOCX ou image jusqu'à 2 Mo",
+      "documenterror" : "Veuillez télécharger vos documents.",
+      "documentdescription" : "Téléchargez un document officiel comme preuve que votre petite entreprise ou start-up est légitime. Cela peut inclure un certificat d'enregistrement de l'entreprise, un numéro d'identification fiscale ou tout autre document juridique pertinent.",
+      "button1" : "Suivant",
+      "button2" : "Précédent"
+    },
+    "step3" : {
+      "title" :"Conditions et confirmation",
+      "subtitle" : "Lisez les conditions et confirmez.",
+      "term1title" : "1. Collecte et utilisation des données",
+      "term1content" : "En soumettant ce formulaire, vous acceptez la collecte, le traitement et le stockage de vos informations personnelles, y compris mais sans s'y limiter, votre nom, votre adresse e-mail, votre numéro de carte d'identité nationale/passeport et les détails de votre entreprise. Ces informations seront utilisées uniquement à des fins d'identification, de vérification et de communication.",
+      "term2title" : "2. Confidentialité et secret",
+      "term2content" : "Nous valorisons votre confidentialité. Toutes les données personnelles soumises seront stockées en toute sécurité et ne seront pas partagées avec des tiers sans votre consentement explicite, sauf si requis par la loi ou les autorités réglementaires.",
+      "checkbox" : "J'accepte les termes et conditions",
+      "button1" : "Suivant",
+      "button2" : "Précédent"
+    },
+    "step4" : {
+      "title" : "Merci pour votre inscription",
+      "subtitle1" : "Votre demande a été soumise avec succès.",
+      "subtitle2" : "Nous examinerons votre demande et vous contacterons dès que possible.",
+      "subsubtitle1" : "Vérifiez votre e-mail pour des mises à jour sur l'état de votre demande.",
+      "subsubtitle2" : "Si vous avez des questions, veuillez nous contacter à",
+      "button1" : "Page d'accueil",
+      "button2" : "Déconnexion"
+    },
+    "stepsstatus" : {
+      "inprogress" : "En cours",
+      "completed" : "Terminé",
+      "pending" : "En attente",
+      "orcontinuewith" :"ou continuer avec",
+       "google" :"Google",
+      "facebook" : "Facebook"
+      
+    }
   }
 }

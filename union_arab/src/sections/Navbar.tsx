@@ -10,7 +10,7 @@ import React from 'react'
 const Navbar = () => {
     const t = useTranslations('Navbar');
   return (
-    <nav className='bg-white dark:bg-gray-800 w-full h-32  flex items-center justify-between px-12 shadow-sm z-10'>
+    <header className='bg-white dark:bg-gray-800 w-full h-32 z-20  flex items-center justify-between px-12 border-b border-muted-foreground '>
       <Image src='/logo.svg' width={100} height={100} alt='logo' />
       <div className='flex gap-5'>
       
@@ -37,7 +37,7 @@ const Navbar = () => {
         <Button variant={'outline'} className='text-[#0E4815] border-[#0E4815]  bg-transparent font-bold px-4 py-2' >{t('register')}</Button>
         </Link>
       </div>
-    </nav>
+    </header>
   )
 }
 

@@ -1,7 +1,7 @@
 {
   "HomePage": {
     "Hero": {
-      "title": "Arab Small Business Federation",
+      "title": "Arab Union for Small Enterprises",
       "subtitle": "We empower small businesses to thrive and grow in the Arab world.",
       "button1": "Discover More",
       "button2": "Join Us Now"
@@ -9,60 +9,60 @@
     "news": {
       "title1": "Latest ",
       "title2": "News",
-      "button": "Read More"
+      "button": "Click for More"
     },
     "details": {
       "vision": {
         "title": "Our Vision",
-        "content": "To create a thriving and supportive environment for small enterprises in Arab countries, contributing to sustainable economic development"
+        "content": "To create a thriving and supportive environment for small enterprises in Arab countries, contributing to sustainable economic development."
       },
       "message": {
         "title": "Our Mission",
-        "content": "Empowering small businesses through financial and technical support, enhancing communication between entrepreneurs and investors, and providing training and funding opportunities to boost their growth."
+        "content": "To empower small enterprises through financial and technical support, enhance communication between entrepreneurs and investors, and provide training and funding opportunities to foster their growth."
       },
       "goals": {
         "title": "Our Goals",
         "content": {
           "1": "Promote entrepreneurship culture.",
-          "2": "Provide financial and administrative consultations for small business owners.",
+          "2": "Provide financial and managerial consultations to small business owners.",
           "3": "Facilitate access to funding sources.",
-          "4": "Support policies favoring small businesses.",
+          "4": "Support policies that favor small enterprises.",
           "5": "Establish strategic partnerships to enhance the business environment."
         }
       },
       "values": {
         "title": "Our Values",
         "content": {
-          "1": "Collaboration: Providing a space for small enterprises to connect and share experiences.",
-          "2": "Mutual Support: Offering a system for contributions and donations to support projects.",
-          "3": "Innovation: Developing a modern digital platform with AI technology integration."
+          "1": "Collaboration: Provide a space for small enterprises to communicate and share experiences.",
+          "2": "Mutual Support: Offer a system for contributions and donations to support projects.",
+          "3": "Innovation: Develop a modern digital platform with the integration of artificial intelligence technologies."
         }
       }
     },
     "testimonial": {
-      "title1": "Stories",
+      "title1": "They Talk",
       "title2": "About Us",
       "content": [
         {
-          "name": "Mohamed Al-Arabi",
+          "name": "Mohamed Al Arabi",
           "position": "Entrepreneur",
-          "quote": "The Federation helped develop my idea and turn it into a successful project."
+          "quote": "The Union helped develop my idea and turn it into a successful project."
         },
         {
-          "name": "Sara Al-Arabi",
+          "name": "Sarah Al Arabi",
           "position": "Entrepreneur",
-          "quote": "The Federation provides the financial and technical support needed for small business success."
+          "quote": "The Union provides the necessary financial and technical support for the success of small businesses."
         },
         {
-          "name": "Ahmed Al-Arabi",
+          "name": "Ahmed Al Arabi",
           "position": "Entrepreneur",
-          "quote": "The Federation offers an encouraging environment for small businesses."
+          "quote": "The Union offers an encouraging environment for small businesses."
         }
       ]
     },
     "download": {
       "title": "Download Our App Now",
-      "content": "Discover features of our app specifically designed to meet your daily needs.",
+      "content": "Discover the benefits of our app designed specifically to meet your daily needs.",
       "button1": {
         "title": "Get It Now",
         "content": "Google Play Store"
@@ -92,5 +92,84 @@
   "footer": {
     "title": "Arab Union for Small Enterprises",
     "content": "All rights reserved"
+  },
+  "LoginPage": {
+    "greeting" : "Welcome Back",
+    "title" : "Enter your credentials to access your account", 
+    "email" : "Email",
+    "password" : "Password",
+    "button" : "Login",
+    "forgot" : "Forgot Password?",
+    "register" : "Don't have an account? Register Now",
+    "email_message": "Please enter a valid email address.",
+    "password_message_1": "Password must be at least 6 characters long.",
+    "password_message_2": "Password must contain at least one uppercase letter, one lowercase letter, and one number.",
+    "toast_success": "Welcome Back!", 
+    "toast_success_description" : "You have successfully logged in.",
+    "toast_error": "Login Error. Please check your email and password."
+  },
+  "RegisterPage": {
+    "step1" : {
+      "title" : "Select Your Role",
+      "subtitle" : "Choose the role that suits you.",
+      "error"  :"Please select at least one role.",
+      "role1" : "Beneficiary Member",
+      "role2" : "Active Member",
+      "button" : "Next"
+    }, 
+    "step2" : {
+      "title" : "User Data",
+      "subtitle" : "Enter your data carefully.",
+      "firstname" : "First Name",
+      "firstnameplaceholder" : "Enter your first name",
+      "lastname" : "Last Name",
+      "lastnameplaceholder" : "Enter your last name",
+      "email" : "Email",
+      "emailplaceholder" : "Enter your email",
+      "cin"  : "CIN / Passport",
+      "cinplaceholder" : "Enter your CIN or passport number",
+      "cindescription" : "Provide your national ID card number (CIN) or passport number for verification.",
+      "contry" : "Country",
+      "contryplaceholder" : "Select your country",
+      "number" : "Phone Number",
+      "numberplaceholder" : "Enter your phone number",
+      "number2" : "Phone Number (optional)",
+      "number2placeholder" : "Enter your phone number (optional)",
+      "document" : "Upload Documents",
+      "documenttitle" : "Click to upload or drag and drop",
+      "documentsubtitle" : "PDF, DOC, DOCX, or image up to 2MB",
+      "documenterror" : "Please upload your documents.",
+      "documentdescription" : "Upload an official document as proof that your small business or start-up is legitimate. This may include a business registration certificate, tax identification number, or any other relevant legal document.",
+      "button1" : "Next",
+      "button2" : "Previous"
+    },
+    "step3" : {
+      "title" :"Terms and Confirmation",
+      "subtitle" : "Read the terms and confirm.",
+      "term1title" : "1. Data Collection and Use",
+      "term1content" : "By submitting this form, you agree to the collection, processing, and storage of your personal information, including but not limited to your name, email address, national ID/passport number, and company details. This information will be used solely for identification, verification, and communication purposes.",
+      "term2title" : "2. Privacy and Confidentiality",
+      "term2content" : "We value your privacy. Any personal data submitted will be stored securely and will not be shared with third parties without your explicit consent, except as required by law or regulatory authorities.",
+      "checkbox" : "I agree to the terms and conditions",
+      "button1" : "Next",
+      "button2" : "Previous"
+    },
+    "step4" : {
+      "title" : "Thank You for Registering",
+      "subtitle1" : "Your application has been successfully submitted.",
+      "subtitle2" : "We will review your application and contact you as soon as possible.",
+      "subsubtitle1" : "Check your email for updates on your application status.",
+      "subsubtitle2" : "If you have any inquiries, please contact us at",
+      "button1" : "Home Page",
+      "button2" : "Logout"
+    },
+    "stepsstatus" : {
+      "inprogress" : "In Progress",
+      "completed" : "Completed",
+      "pending" : "Pending",
+      "orcontinuewith" :"or continue with",
+      "google" :"Google",
+      "facebook" : "Facebook"
+    }
   }
 }
