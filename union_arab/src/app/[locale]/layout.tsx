@@ -27,7 +27,7 @@ const messages = await getMessages();
 return (
   
       <NextIntlClientProvider messages={messages}>
-      <main dir={direction} className="min-h-screen flex flex-col  ">
+      <main dir={direction} >
 
         {children}
 

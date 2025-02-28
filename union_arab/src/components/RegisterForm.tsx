@@ -251,7 +251,6 @@ export function RegisterForm({
                     "email",
                     "cin",
                     "number",
-                    "number2",
                     "contry",
                     "document",
                   ]);

@@ -20,9 +20,9 @@ const Home = () => {
   const locale = useLocale();
   const direction = getLangDir(locale);
   return (
-    <div className="w-full min-h-screen flex flex-col bg-white dark:bg-gray-800">
+    <div className=" min-h-screen  bg-white dark:bg-gray-800">
       {/* Hero */}
-      <div className=" w-full h-auto flex flex-col items-center justify-center py-16 bg-gradient-to-r from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 relative gap-12 text-center">
+      <div className=" h-auto flex flex-col items-center justify-center py-16 bg-gradient-to-r from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 relative gap-12 text-center">
         <Image
           src="/bglogo.svg"
           width={620}
@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       </div>
       {/* Flags */}
-      <div className="flex overflow-hidden px-36 py-24 h-52 flex-row items-center justify-center relative pl-[25rem] bg-white dark:bg-gray-800">
+      <div className="flex overflow-x-hidden px-36 py-24 h-52 flex-row items-center justify-center relative pl-[25rem] bg-white dark:bg-gray-800">
         {/* Double the content for seamless looping */}
 
         <motion.div
@@ -98,7 +98,10 @@ const Home = () => {
           collapsible
           className="w-full border-[#0E4815] "
         >
-          <AccordionItem value="1" className="border-b-[1px] border-muted-foreground">
+          <AccordionItem
+            value="1"
+            className="border-b-[1px] border-muted-foreground"
+          >
             <AccordionTrigger className="font-amiri font-bold text-4xl text-black dark:text-white">
               <div className="flex gap-10 text-black dark:text-white">
                 <Image
@@ -114,7 +117,10 @@ const Home = () => {
               {t("details.vision.content")}
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="2" className="border-b-[1px] border-muted-foreground">
+          <AccordionItem
+            value="2"
+            className="border-b-[1px] border-muted-foreground"
+          >
             <AccordionTrigger className="font-amiri font-bold text-4xl">
               <div className="flex gap-10 text-black dark:text-white">
                 <Image
@@ -130,7 +136,10 @@ const Home = () => {
               {t("details.message.content")}
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="3" className="border-b-[1px] border-muted-foreground">
+          <AccordionItem
+            value="3"
+            className="border-b-[1px] border-muted-foreground"
+          >
             <AccordionTrigger className="font-amiri font-bold text-4xl">
               <div className="flex gap-10 text-black dark:text-white">
                 <Image
@@ -152,7 +161,10 @@ const Home = () => {
               </ul>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="4" className="border-b-[1px] border-muted-foreground">
+          <AccordionItem
+            value="4"
+            className="border-b-[1px] border-muted-foreground"
+          >
             <AccordionTrigger className="font-amiri font-bold text-4xl">
               <div className="flex gap-10 text-black dark:text-white">
                 <Image
@@ -193,7 +205,6 @@ const Home = () => {
           </h1>
         </div>
       </div>
-
     </div>
   );
 };
