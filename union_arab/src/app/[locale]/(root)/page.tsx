@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div className=" min-h-screen  bg-white dark:bg-gray-800">
       {/* Hero */}
-      <div className=" h-auto flex flex-col items-center justify-center py-16 bg-gradient-to-r from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 relative gap-12 text-center">
+      <div className=" h-auto flex flex-col items-center justify-center py-16 bg-linear-to-r from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 relative gap-12 text-center">
         <Image
           src="/bglogo.svg"
           width={620}
@@ -77,7 +77,7 @@ const Home = () => {
                 width={120}
                 height={80}
                 alt={flag.name}
-                className="flex-shrink-0"
+                className="shrink-0"
               />
             );
           })}
@@ -199,7 +199,7 @@ const Home = () => {
       </div>
       {/*download*/}
       <div className="py-20 px-16 lg:px-36 bg-white dark:bg-gray-800">
-        <div className="py-20  bg-gradient-to-r  from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 rounded-2xl">
+        <div className="py-20  bg-linear-to-r  from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 rounded-2xl">
           <h1 className="animated-gradient-text font-amiri font-bold text-5xl">
             {t("download.title")}
           </h1>

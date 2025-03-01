@@ -43,7 +43,7 @@ import Caroussel_Steps from "./Caroussel_Steps";
           <CarouselItem key={index}>
             <div className="p-1">
               <Card>
-                <CardContent className="flex aspect-[1/2] md:aspect-[5/2] items-center justify-center p-6">
+                <CardContent className="flex aspect-1/2 md:aspect-5/2 items-center justify-center p-6">
                   <span className="text-4xl font-semibold">{index + 1}</span>
                 </CardContent>
               </Card>

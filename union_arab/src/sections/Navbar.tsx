@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <header className='bg-white dark:bg-gray-800 w-full h-32 z-20  flex items-center justify-between px-12 border-b border-muted-foreground '>
       <Image src='/logo.svg' width={100} height={100} alt='logo' />
-      <div className='hidden xl:block gap-12 font-amiri text-lg  font-normal  '>
+      <div className='hidden xl:flex gap-12 font-amiri text-lg  font-normal  '>
      
         <Link  href='/'>{t('home')}</Link>
         <Link className='flex items-center justify-center' href='/organization'>{t('organization')}<ChevronDown /></Link>

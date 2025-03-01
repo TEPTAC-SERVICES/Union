@@ -146,7 +146,7 @@ const Page = () => {
 
   return (
     <div className="flex items-stretch justify-center min-h-screen bg-white dark:bg-gray-800">
-      <div className="hidden w-1/2 bg-gradient-to-r from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 lg:relative lg:flex lg:flex-col lg:items-center lg:justify-center">
+      <div className="hidden w-1/2 bg-linear-to-r from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 lg:relative lg:flex lg:flex-col lg:items-center lg:justify-center">
         <Image
           src="/logo.svg"
           width={540}
