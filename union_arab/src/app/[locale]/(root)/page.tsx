@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       </div>
       {/* Flags */}
-      <div className="flex overflow-x-hidden px-36 py-24 h-52 flex-row items-center justify-center relative pl-[25rem] bg-white dark:bg-gray-800">
+      <div className="flex overflow-hidden px-36 py-24 h-52 flex-row items-center justify-center relative pl-[25rem] bg-white dark:bg-gray-800">
         {/* Double the content for seamless looping */}
 
         <motion.div

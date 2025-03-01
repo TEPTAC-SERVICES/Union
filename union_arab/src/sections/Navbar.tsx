@@ -6,28 +6,25 @@ import { ChevronDown, Globe } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import React from 'react'
-
 const Navbar = () => {
     const t = useTranslations('Navbar');
   return (
     <header className='bg-white dark:bg-gray-800 w-full h-32 z-20  flex items-center justify-between px-12 border-b border-muted-foreground '>
       <Image src='/logo.svg' width={100} height={100} alt='logo' />
-      <div className='flex gap-5'>
-      
-        <Link href='/'>{t('home')}</Link>
-        <Link href='/organization'>{t('organization')}</Link>
-        <Link href='/membership'>{t('membership')}</Link>
-        <Link href='/activities'>{t('activities')}</Link>
-        <Link href='/financing'>{t('financing')}</Link>
-        <Link href='/documents'>{t('documents')}</Link>
-        <Link href='/contact-us'>{t('contact us')}</Link>
-        
+      <div className='hidden xl:block gap-12 font-amiri text-lg  font-normal  '>
+     
+        <Link  href='/'>{t('home')}</Link>
+        <Link className='flex items-center justify-center' href='/organization'>{t('organization')}<ChevronDown /></Link>
+        <Link className='flex items-center justify-center' href='/membership'>{t('membership')}<ChevronDown /></Link>
+        <Link className='flex items-center justify-center' href='/activities'>{t('activities')}<ChevronDown /></Link>
+        <Link  href='/financing'>{t('financing')}</Link>
+        <Link className='flex items-center justify-center' href='/documents'>{t('documents')}<ChevronDown /></Link>
+        <Link  href='/contact-us'>{t('contact us')}</Link>
+       
       </div>
       <div className='flex gap-5 items-center'>
-        <div className='flex gap-1'><ChevronDown /><Globe /> </div>
+        <div className='flex '><Globe /><ChevronDown /></div>
         <ThemeToggle/>
-
-
       </div>
       <div className='flex gap-5'>
         <Link href='/login'>
@@ -40,5 +37,4 @@ const Navbar = () => {
     </header>
   )
 }
-
 export default Navbar
