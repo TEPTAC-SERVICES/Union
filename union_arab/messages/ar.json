@@ -1,4 +1,43 @@
 {
+  "Navbar": {
+    "home": "الرئيسية",
+    "organization":{
+      "title" :  "المنظمة",
+      "structure": "الهيكل التنظيمي للاتحاد",
+      "presidency": "رئاسة الاتحاد",
+      "secretariat": "الأمانة العامة",
+      "board_of_directors": "مجلس الإدارة"
+    },
+    "membership": {
+      "title": "العضوية",
+      "benefits": "مزايا العضوية",
+      "join": "انضم إلينا",
+      "members_directory": "دليل الأعضاء"
+    },
+    "activities": {
+      "title": "الأخبار والفعاليات",
+      "upcoming_events": "الفعاليات القادمة",
+      "conferences": "المؤتمرات",
+      "past_events": "الفعاليات السابقة"
+    },
+
+    "financing": {
+      "title" : "التمويل",
+      "info": "معلومات حول التمويل",
+      "beneficiaries": "المستفيدون بالتمويل",
+      "statistics": "الإحصائيات"
+    },
+    "documents": {
+      "title" : "الوثائق",
+      "union_docs": "وثائق تخص الاتحاد",
+      "annual_report": "تقرير سنوي",
+      "basic_law": "القانون الأساسي"
+    },
+    "contact us": "الاتصال بنا",
+    "select language" : "اختر لغة : " ,
+    "login": "دخول",
+    "register": "اشتراك"
+  },
   "HomePage": {
     "Hero": {
       "title": "الاتحاد العربي للمنشآت الصغيرة",
@@ -73,22 +112,7 @@
       }
     }
   },
-  "Navbar": {
-    "home": "الرئيسية",
-    "organization": "المنظمة",
-    "membership": "العضوية",
-    "activities": "الأنشطة",
-    "financing": "التمويل",
-    "documents": "الوثائق",
-    "contact us": "الاتصال بنا",
-    "login": "دخول",
-    "register": "اشتراك",
-    "documents_about": "وثائق عن الاتحاد",
-    "annual_reports": "التقارير السنوية",
-    "financial_reports": "التقارير المالية",
-    "law": "الفانون الأساسي",
-    "info_financing": "معلومات عن التمويل"
-  },
+  
   "footer": {
     "title": "الاتحاد العربي للمنشآت الصغيرة",
     "content": "جميع الحقوق محفوظة"
@@ -114,8 +138,8 @@
       "title" : "حدد دورك",
       "subtitle" : "اختر الدور الذي يناسبك.",
       "error"  :"الرجاء اختيار دور واحد على الأقل.",
-      "role1" : "عضو مستفيد",
-      "role2" : "عضو فاعل",
+      "Affiliate Membership" : "عضو منتسب",
+      "Active Membership" : "عضو عامل",
       "button" : "التالي"
     }, 
     "step2" : {
@@ -130,8 +154,8 @@
       "cin"  : "CIN / جواز السفر",
       "cinplaceholder" : "أدخل رقم CIN أو جواز السفر الخاص بك",
       "cindescription" : "قم بتقديم رقم الهوية الوطنية (CIN) أو رقم جواز السفر للتحقق.",
-      "contry" : "البلد",
-      "contryplaceholder" : "اختر البلد",
+      "country" : "البلد",
+      "countryplaceholder" : "اختر البلد",
       "number" : "رقم الهاتف",
       "numberplaceholder" : "أدخل رقم الهاتف",
       "number2" : "رقم الهاتف (اختياري)",
@@ -140,6 +164,16 @@
       "documenttitle" : "انقر للتحميل أو السحب والإفلات",
       "documentsubtitle" : "PDF أو DOC أو DOCX أو صورة يصل حجمها إلى 2 ميجا بايت",
       "documenterror" : "الرجاء تحميل وثائقك.",
+      "establishment" : "اسم المؤسسة",
+      "establishmentplaceholder" : "ادخل اسم المؤسسة",
+      "establishment_country" : "بلد المؤسسة",
+      "establishment_countryplaceholder" : "ادخل بلد المؤسسة",
+      "number_of_employees" : "عدد الموظفين",
+      "number_of_employeesplaceholder" : "ادخل عدد الموظفين",
+      "max_capital" : "الربح المتوقع",
+      "max_capitalplaceholder" : "ادخل ربح المتوقع",
+      "employees" : "عدد الموظفين",
+      "employeesplaceholder" : "ادخل عدد الموظفين",
       "documentdescription" : "قم بتحميل مستند رسمي كدليل على أن شركتك الصغيرة أو الناشئة مشروعة. قد يتضمن ذلك شهادة تسجيل الشركة أو رقم التعريف الضريبي أو أي مستند قانوني ذي صلة.",
       "button1" : "التالي",
       "button2" : "السابق"

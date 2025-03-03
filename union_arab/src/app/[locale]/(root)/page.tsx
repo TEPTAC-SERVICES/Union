@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import TestimonialCaroussel from "@/components/TestimonialCaroussel";
+import { cn } from "@/lib/utils";
 
 const Home = () => {
   const t = useTranslations("HomePage");
@@ -39,18 +40,20 @@ const Home = () => {
         <div className="flex gap-5 flex-col md:flex-row font-amiri ">
           <Button className="text-white bg-[#0E4815] px-12 py-8 font-bold text-[25px] hover:bg-[#092F0E]   z-10">
             {t("Hero.button2")}
-            <ArrowUpLeft className="text-white" />
+            <ArrowUpLeft className={cn("text-white" , direction==="ltr"? "rotate-y-180" : "")} />
           </Button>
           <div className="group z-10">
-            <Button
-              variant="outline"
-              className="text-[#0E4815] border-[#0E4815] px-12 py-8 bg-transparent font-bold text-[25px] z-10 
+  <Button
+    variant="outline"
+    className="text-[#0E4815] border-[#0E4815] px-12 py-8 bg-transparent font-bold text-xl z-10
     group-hover:bg-[#0E4815] group-hover:text-white transition-all duration-200"
-            >
-              {t("Hero.button1")}
-              <ArrowUpLeft className="text-[#0E4815] group-hover:text-white transition-all duration-200" />
-            </Button>
-          </div>
+  >
+
+    <p>{t("Hero.button1")}</p>
+    <ArrowUpLeft className={cn("text-[#0E4815] group-hover:text-white transition-all duration-200", 
+      direction === "ltr" ? "rotate-y-180" : "")} />
+  </Button>
+</div>
         </div>
       </div>
       {/* Flags */}

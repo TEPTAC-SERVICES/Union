@@ -178,11 +178,18 @@
     animation: gradient 3s linear infinite;
   }
 
-  .shadowButton {
-    box-shadow: 0px 1px 6.6px 0px #00000040;
-  }
+  
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 
 @layer base {
