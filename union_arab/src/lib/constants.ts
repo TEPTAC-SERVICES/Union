@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 export const flags = [
     {
       id: 1,
@@ -61,3 +63,35 @@ export  const languages = [
   ];
 
 
+export  const StepsConfig = (stepnumber: number) => {
+    const t = useTranslations("RegisterPage");
+
+    
+    if (stepnumber === 1) {
+      return [
+        { label: t('step1.title'), status: "in-progress", description: t('stepsstatus.inprogress')},
+        { label: t('step2.title'), status: "pending", description: t('stepsstatus.pending') },
+        { label: t('step3.title'), status: "pending", description: t('stepsstatus.pending') },
+      ];
+    } else if (stepnumber === 2) {
+      return [
+        { label: t('step1.title'), status: "completed", description: t('stepsstatus.completed') },
+        { label: t('step2.title'), status: "in-progress", description: t('stepsstatus.inprogress')},
+        { label: t('step3.title'), status: "pending", description: t('stepsstatus.pending') },
+      ];
+    }
+    else if (stepnumber === 3) {
+      return [
+        { label: t('step1.title'), status: "completed", description: t('stepsstatus.completed') },
+        { label: t('step2.title'), status: "completed", description: t('stepsstatus.completed') },
+        { label: t('step3.title'), status: "in-progress", description: t('stepsstatus.inprogress')},
+      ];
+    }
+    else if (stepnumber === 4) {
+      return [
+        { label: t('step1.title'), status: "completed", description: t('stepsstatus.completed') },
+        { label: t('step2.title'), status: "completed", description: t('stepsstatus.completed') },
+        { label: t('step3.title'), status: "completed", description: t('stepsstatus.completed') },
+      ];
+    }
+  }

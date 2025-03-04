@@ -16,12 +16,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Menu,  Mail, Home } from 'lucide-react'
+import { Menu,  Mail, Home, Sun, Moon } from 'lucide-react'
 
 import { useRouter, usePathname } from 'next/navigation'
 import { getLangDir } from 'rtl-detect'
 import { useNavigationItems } from '@/hooks/useNavigationItems'
 import { languages } from '@/lib/constants'
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { useTheme } from 'next-themes'
+
 
 
 export const MobileMenu = ({ 
@@ -36,6 +39,8 @@ export const MobileMenu = ({
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const navigationItems = useNavigationItems();
+  const { theme, setTheme } = useTheme()
+
 
 
   const handleLanguageChange = (langCode :string) => {
@@ -57,15 +62,15 @@ export const MobileMenu = ({
             <Menu className="h-6 w-6" />
            
         </SheetTrigger>
-        <SheetContent side={direction === 'ltr' ? "right" : "left"} className="w-full sm:w-80 pt-12 flex flex-col" dir={direction}>
+        <SheetContent side={direction === 'ltr' ? "right" : "left"} className="w-full sm:w-80 pt-12 flex flex-col bg-white dark:bg-gray-800 px-5" dir={direction}>
           
 
           {/* Mobile Navigation */}
           <div className="flex flex-col gap-6 h-full">
-            <nav className="flex flex-col gap-1">
+            <nav className="flex flex-col gap-1 ">
             <Link 
                 href='/' 
-                className="px-6 py-3 hover:bg-muted rounded-md transition-colors flex items-center gap-2 font-amiri font-medium text-md"
+                className="px-6 py-3 hover:bg-muted rounded-md transition-colors flex items-center gap-2 font-amiri font-medium text-md border-b border-muted-foreground"
                 onClick={() => setOpen(false)}
               >
                 
@@ -77,14 +82,14 @@ export const MobileMenu = ({
               <Accordion type="single" collapsible className="w-full" >
                 {navigationItems.map((item) => (
                   <AccordionItem key={item.key} value={item.key}>
-                    <AccordionTrigger className="px-4 py-3 hover:bg-muted rounded-md transition-colors font-amiri font-medium text-lg">
+                    <AccordionTrigger className="px-4 py-3 hover:bg-muted rounded-md transition-colors font-amiri font-medium text-lg border-b border-muted-foreground">
                       <div className="flex items-center gap-2">
                         {item.icon}
                         {item.label}
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="pr-4 flex flex-col gap-1 py-1 text-sm font-[500px]">
+                      <div className="pr-4 flex flex-col gap-1 py-1 text-sm text-[16px]">
                         {item.items.map((subItem) => (
                           <Link 
                             key={subItem.href} 
@@ -105,7 +110,7 @@ export const MobileMenu = ({
             
               <Link 
                 href='/contact-us' 
-                className="px-6 py-3 hover:bg-muted rounded-md transition-colors flex items-center gap-2 font-amiri font-medium text-md"
+                className="px-6 py-3 hover:bg-muted rounded-md transition-colors flex items-center gap-2 font-amiri font-medium text-md border-b border-muted-foreground"
                 onClick={() => setOpen(false)}
               >
                 <Mail className="h-4 w-4" />
@@ -114,21 +119,34 @@ export const MobileMenu = ({
             </nav>
             
             {/* Language Selector in Mobile */}
-            <div className="px-4 py-2 md:hidden">
+            <div className="px-4 py-2 md:hidden ">
               <h3 className="mb-2 text-sm font-medium">{t('select language')}</h3>
               <div className="flex flex-col gap-1">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => handleLanguageChange(lang.code)}
-                    className={`py-2 px-3 text-left rounded-md hover:bg-muted transition-colors ${direction === "rtl" ? "text-right" : ""}`}
-                  >
-                    <span className="flex items-center justify-between">
-                      {lang.name}
-                      {lang.code}
-                    </span>
-                  </button>
+             
+                  <ToggleGroup type="single" className='w-full'  variant={'outline'} value={locale}>
+                  {languages.map((lang) => (
+                  <ToggleGroupItem className="border-muted-foreground text-muted-foreground hover:bg-muted " key ={lang.code} onClick={() => handleLanguageChange(lang.code)} value={lang.code}>{lang.name}</ToggleGroupItem>
                 ))}
+                  
+                </ToggleGroup>
+    
+                
+              </div>
+            </div>
+
+            <div className="px-4 py-2 md:hidden">
+              <h3 className="mb-2 text-sm font-medium">{t('select theme')}</h3>
+              <div className="flex flex-col gap-1">
+             
+                  <ToggleGroup type="single" className='w-full'  variant={'outline'} value={theme}>
+                  <ToggleGroupItem className="border-muted-foreground text-muted-foreground hover:bg-muted " value='light' onClick={() => setTheme('light')}>{t('light')}<Sun/></ToggleGroupItem>
+                  <ToggleGroupItem className="border-muted-foreground text-muted-foreground hover:bg-muted " value='dark' onClick={()=> setTheme('dark')}>{t('dark')}<Moon/></ToggleGroupItem>
+
+              
+                  
+                </ToggleGroup>
+    
+                
               </div>
             </div>
             

@@ -1,10 +1,12 @@
 "use client";
-import FormSteps from "@/components/FormSteps";
+import FormSteps from "@/components/RegisterForm/FormSteps";
 import React, { useState } from "react";
-import { RegisterForm } from "@/components/RegisterForm";
+import { RegisterForm } from "@/components/RegisterForm/RegisterForm";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import ThankYouStep from "@/components/RegisterForm/ThankYouStep";
+import FormStepsMobile from "@/components/RegisterForm/FormStepsMobile";
 
 const Page = () => {
   const [step, setStep] = useState(1);
@@ -48,7 +50,9 @@ const Page = () => {
 
       {/* Middle Section (Main Content) - Set to be scrollable */}
       <main className="bg-white dark:bg-gray-800 p-4 flex flex-col gap-4 overflow-y-auto max-h-screen no-scrollbar">
-        <>
+        <FormStepsMobile stepindex={step} />
+        {[1, 2, 3].includes(step) ? (
+          <>
           <h1 className="text-2xl font-bold font-amiri">
             {t(`step${step}.title`)}
           </h1>
@@ -56,10 +60,11 @@ const Page = () => {
             {t(`step${step}.subtitle`)}
           </h2>
           <div className="border-b border-muted-foreground" />
-          {[1, 2, 3].includes(step) ? (
+          
             <RegisterForm step={step} setStep={setStep} />
-          ) : null}
-        </>
+            </>
+          ) : <ThankYouStep />}
+        
       </main>
 
       {/* Right Sidebar - Same treatment as left sidebar */}

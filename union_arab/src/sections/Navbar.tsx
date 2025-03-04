@@ -26,7 +26,7 @@ const Navbar = () => {
 
       <MenuItemsDesktop />
 
-      <div className="flex gap-5 items-center">
+      <div className="hidden md:flex gap-5 items-center ">
         <Languagedropdown />
         <ThemeToggle />
       </div>
@@ -40,7 +40,7 @@ const Navbar = () => {
         <Link href="/register">
           <Button
             variant="outline"
-            className="text-[#0E4815] border-[#0E4815] hover:bg-[#f0f7f1] dark:hover:bg-[#1a2e1d] font-bold px-6 py-2 rounded-md transition-all hover:shadow-md"
+            className="text-[#0E4815] border-[#0E4815]  bg-transparent hover:bg-[#0E4815] hover:text-white font-bold px-6 py-2 rounded-md transition-all hover:shadow-md"
           >
             <span className="flex items-center gap-1">{t("register")}</span>
           </Button>

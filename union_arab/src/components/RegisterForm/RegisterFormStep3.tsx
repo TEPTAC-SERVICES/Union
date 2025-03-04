@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Checkbox } from './ui/checkbox'
+import { Checkbox } from '../ui/checkbox'
 import { useTranslations } from 'next-intl';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 import { cn } from '@/lib/utils';
 
 const RegisterFormStep3 = ({step, setStep} : {step: number; setStep: React.Dispatch<React.SetStateAction<number>>}) => {
@@ -29,7 +29,9 @@ const RegisterFormStep3 = ({step, setStep} : {step: number; setStep: React.Dispa
         variant={"outline"}
         className="border-[#0E4815]
        text-[#0E4815] font-bold px-4 py-2 bg-white dark:bg-gray-800"
-        onClick={() => setStep((prev) => prev - 1)}
+        onClick={() => {
+          
+          setStep((prev) => prev - 1)}}
       >
         {t("step3.button2")}
       </Button>

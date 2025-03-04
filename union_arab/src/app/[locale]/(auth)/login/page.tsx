@@ -4,9 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import axios from "axios";
-import {  useState } from "react";
-import { 
-  Loader2 } from "lucide-react";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -25,13 +24,10 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { getLangDir } from "rtl-detect";
 
-
 const Page = () => {
-
-
-   const t = useTranslations("LoginPage");
-    const locale = useLocale();
-    const direction = getLangDir(locale);
+  const t = useTranslations("LoginPage");
+  const locale = useLocale();
+  const direction = getLangDir(locale);
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -45,13 +41,12 @@ const Page = () => {
         message: t("password_message_1"),
       })
       .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/, {
-        message:
-          t("password_message_2"),
+        message: t("password_message_2"),
       }),
   });
-  
 
-  const BackendURL = process.env.NEXT_PUBLIC_BACK_END_URL || "http://localhost:5000";
+  const BackendURL =
+    process.env.NEXT_PUBLIC_BACK_END_URL || "http://localhost:5000";
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -129,9 +124,7 @@ const Page = () => {
         toast({
           title: "خطأ",
           description:
-            error instanceof Error
-              ? error.message
-              : "حدث خطأ غير متوقع",
+            error instanceof Error ? error.message : "حدث خطأ غير متوقع",
           variant: "destructive",
         });
       }
@@ -154,57 +147,67 @@ const Page = () => {
           alt="logo"
           className="absolute opacity-15"
         />
-        <h1 className="animated-gradient-text font-amiri text-[100px] py-5 z-10">{t('greeting')}</h1>
+        <h1 className="animated-gradient-text font-amiri text-[100px] py-5 z-10">
+          {t("greeting")}
+        </h1>
       </div>
       <div className="flex w-full flex-col items-center justify-center lg:w-1/2">
         <div className="space-y-8 w-full max-w-md px-4">
           <div className="space-y-4">
-            <h1 className="text-3xl  font-bold font-amiri text-center pb-20">{t("title")}</h1>
-            
+            <h1 className="text-3xl  font-bold font-amiri text-center pb-20">
+              {t("title")}
+            </h1>
+
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-4"
+              >
                 <FormField
                   control={form.control}
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="block text-sm mb-2">{t('email')}</FormLabel>
+                      <FormLabel className="block text-sm mb-2">
+                        {t("email")}
+                      </FormLabel>
                       <FormControl>
                         <Input
-                        dir={direction}
+                          dir={direction}
                           placeholder="john@example.com"
                           {...field}
                           className="w-full focus:ring-[#0E4815] focus:ring-2"
-
                         />
                       </FormControl>
-                      <FormMessage  />
+                      <FormMessage />
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="password"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="block text-sm mb-2">{t('password')}</FormLabel>
+                      <FormLabel className="block text-sm mb-2">
+                        {t("password")}
+                      </FormLabel>
                       <FormControl>
                         <Input
-                        dir={direction}
+                          dir={direction}
                           type="password"
                           placeholder="••••••••"
                           {...field}
                           className="w-full focus:ring-[#0E4815] focus:ring-2"
                         />
-                      </FormControl >
-                      <FormMessage  />
+                      </FormControl>
+                      <FormMessage />
                     </FormItem>
                   )}
                 />
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-[#0E4815] hover:bg-green-700 text-[20px] font-amiri"
                   disabled={isLoading}
                 >
@@ -214,37 +217,42 @@ const Page = () => {
                       جاري تسجيل الدخول...
                     </>
                   ) : (
-                      t("button")
+                    t("button")
                   )}
                 </Button>
               </form>
             </Form>
 
             <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <span className="w-full border-t" />
-                </div>
-                <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-background px-2 text-muted-foreground">
-                    أو قم بتسجيل الدخول بواسطة
-                  </span>
-                </div>
+              <div className="absolute inset-0 flex items-center">
+                <span className="w-full border-t" />
               </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-background px-2 text-muted-foreground">
+                  أو قم بتسجيل الدخول بواسطة
+                </span>
+              </div>
+            </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="w-full"
-                onClick={() => handleSocialLogin('facebook')}
+                onClick={() => handleSocialLogin("facebook")}
                 disabled={isLoading}
               >
-                <Image src="/facebook.svg" width={20} height={20} alt="facebook" />
+                <Image
+                  src="/facebook.svg"
+                  width={20}
+                  height={20}
+                  alt="facebook"
+                />
                 فيسبوك
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="w-full"
-                onClick={() => handleSocialLogin('google')}
+                onClick={() => handleSocialLogin("google")}
                 disabled={isLoading}
               >
                 <Image src="/google.svg" width={20} height={20} alt="google" />

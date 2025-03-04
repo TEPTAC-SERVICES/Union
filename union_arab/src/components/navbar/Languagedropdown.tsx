@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { ChevronDown, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { DropdownMenuItem } from "@radix-ui/react-dropdown-menu";
 import { useLocale } from "next-intl";
 import { getLangDir } from "rtl-detect";
 import { usePathname, useRouter } from "next/navigation";
@@ -31,20 +31,17 @@ const Languagedropdown = () => {
   };
 
   const handleLanguageChange = (langCode: string) => {
-    // Get current path and replace language code
-    // This implementation depends on your i18n configuration
     router.push(pathname.replace(/^\/(en|fr|ar)/, `/${langCode}`));
   };
 
   const handleLanguageHoverEnd = () => {
     timeoutRefs.current.language = setTimeout(() => {
       setLanguageOpen(false);
-    }, 150); // 150ms delay
+    }, 150);
   };
 
   useEffect(() => {
     return () => {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       Object.values(timeoutRefs.current).forEach((timeout) => {
         clearTimeout(timeout);
       });
@@ -58,9 +55,9 @@ const Languagedropdown = () => {
       onMouseEnter={handleLanguageHoverStart}
       onMouseLeave={handleLanguageHoverEnd}
     >
-      <DropdownMenu open={languageOpen} onOpenChange={() => {}}>
-        <DropdownMenuTrigger asChild>
-          <button className="flex items-center gap-1 p-2 rounded-md hover:bg-muted transition-colors">
+      <Popover open={languageOpen} onOpenChange={setLanguageOpen}  >
+        <PopoverTrigger asChild dir={direction} className="hover:text-[#0E4815] hover:bg-white dark:hover:bg-gray-800">
+          <div className="flex items-center gap-1 p-2 rounded-md hover:bg-muted transition-colors cursor-pointer">
             <Globe className="h-5 w-5" />
             <ChevronDown
               className={cn(
@@ -68,23 +65,24 @@ const Languagedropdown = () => {
                 languageOpen && "transform rotate-180"
               )}
             />
-          </button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-36" sideOffset={8}>
+          </div>
+        </PopoverTrigger>
+        <PopoverContent align="end" className="w-36 bg-white dark:bg-gray-800" sideOffset={8} dir={direction} >
           {languages.map((lang) => (
-            <DropdownMenuItem
+            <div
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
-              className={direction === "rtl" ? "text-right" : ""}
+              className={`cursor-pointer p-2 hover:bg-gray-200 hover:text-[#0E4815] rounded-md ${
+                direction === "rtl" ? "text-right" : ""
+              }`}
             >
-              <span className="flex items-center justify-between w-full">
-                {lang.name}
-                {lang.code}
+              <span className="flex items-center justify-between w-full ">
+                {lang.name} ({lang.code})
               </span>
-            </DropdownMenuItem>
+            </div>
           ))}
-        </DropdownMenuContent>
-      </DropdownMenu>
+        </PopoverContent>
+      </Popover>
     </div>
   );
 };

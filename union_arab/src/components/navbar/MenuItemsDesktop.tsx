@@ -35,11 +35,11 @@ const MenuItemsDesktop = () => {
           if (openPopover === key) {
             setOpenPopover(null);
           }
-        }, 150); // 150ms delay
+        }, 30); 
       };
   return (
     <nav className='hidden 2xl:flex gap-8 font-amiri text-lg font-normal'>
-    <Link href='/' className="transition-colors hover:text-emerald-600 dark:hover:text-emerald-400">
+    <Link href='/' className="transition-colors hover:text-[#0E4815] ">
       {t('home')}
     </Link>
     
@@ -54,7 +54,7 @@ const MenuItemsDesktop = () => {
       >
         <Popover open={openPopover === item.key} >
           <PopoverTrigger asChild>
-            <button className="flex items-center gap-1 transition-colors hover:text-emerald-600 dark:hover:text-emerald-400 focus:outline-none">
+            <button className="flex items-center gap-1 transition-colors hover:text-[#0E4815] focus:outline-none">
               {item.label} 
               <ChevronDown 
                 className={cn(
@@ -64,13 +64,13 @@ const MenuItemsDesktop = () => {
               />
             </button>
           </PopoverTrigger>
-          <PopoverContent className="w-64 p-0" sideOffset={16}>
+          <PopoverContent className="w-64 p-0 bg-white dark:bg-gray-800 border-muted-foreground" sideOffset={16}>
             <div className="grid gap-1 p-2">
               {item.items.map((subItem) => (
                 <Link 
                   key={subItem.href} 
                   href={subItem.href}
-                  className="flex items-center rounded-md px-4 py-2 text-sm hover:bg-emerald-50 dark:hover:bg-emerald-900 transition-colors hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="flex items-center rounded-md px-4 py-2 text-sm hover:bg-gray-200  transition-colors hover:text-[#0E4815] "
                 >
                   {subItem.label}
                 </Link>
@@ -82,7 +82,7 @@ const MenuItemsDesktop = () => {
     ))}
     
    
-    <Link href='/contact-us' className="transition-colors hover:text-emerald-600 dark:hover:text-emerald-400">
+    <Link href='/contact-us' className="transition-colors hover:text-[#0E4815]">
      
         {t('contact us')}
   

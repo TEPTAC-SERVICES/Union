@@ -33,9 +33,9 @@ export function RegisterForm({
 
   const formSchema = CreateMembershipSchema();
 
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+
     defaultValues: {
       selection: "" as "Affiliate" | "Active",
       firstname: "",
@@ -45,8 +45,13 @@ export function RegisterForm({
       country: "",
       number: "",
       number2: "",
+      establishment: "",
+      establishment_country: "",
+      number_of_employees: "",
+      max_capital: "",
       document: undefined,
     },
+    shouldUnregister: true,
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
@@ -66,6 +71,7 @@ export function RegisterForm({
       // Show success message or redirect
       alert("Form submitted successfully!");
       // You could redirect here or show a success message
+      setStep(4);
     } catch (error) {
       console.error("Form submission error:", error);
       alert("There was an error submitting the form. Please try again.");
@@ -73,6 +79,7 @@ export function RegisterForm({
   }
   /*   console.log("radio value : ", form.watch("selection"));
    */
+
   return (
     <FormProvider {...form}>
       <Form {...form}>
@@ -208,7 +215,11 @@ export function RegisterForm({
                 </FormItem>
               )}
             />
-            <CountrySelect name={t("step2.country")} label={t("step2.country")} placeholder={t("step2.countryplaceholder")}/>
+            <CountrySelect
+              name="country"
+              label={t("step2.country")}
+              placeholder={t("step2.countryplaceholder")}
+            />
             <FormField
               control={form.control}
               name="number"
@@ -245,27 +256,69 @@ export function RegisterForm({
             />
             {form.watch("selection") === "Active" && (
               <FormField
-              control={form.control}
-              name="establishment"
-              render={({ field }) => (
-                <FormItem className="mt-4">
-                  <FormLabel>{t("step2.establishment")}</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder={t("step2.establishmentplaceholder")}
-                      {...field}
-                      className="border-muted-foreground text-muted-foreground dark:bg-gray-800"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+                control={form.control}
+                name="establishment"
+                render={({ field }) => (
+                  <FormItem className="mt-4">
+                    <FormLabel>{t("step2.establishment")}</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder={t("step2.establishmentplaceholder")}
+                        {...field}
+                        className="border-muted-foreground text-muted-foreground dark:bg-gray-800"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             )}
 
-              {form.watch("selection") === "Active" && (
-                          <CountrySelect name={t("step2.establishment_country")} label={t("step2.establishment_country")} placeholder={t("step2.establishment_countryplaceholder")}/>
+            {form.watch("selection") === "Active" && (
+              <CountrySelect
+                name="establishment_country"
+                label={t("step2.establishment_country")}
+                placeholder={t("step2.establishment_countryplaceholder")}
+              />
+            )}
+            {form.watch("selection") === "Active" && (
+              <FormField
+                control={form.control}
+                name="number_of_employees"
+                render={({ field }) => (
+                  <FormItem className="mt-4">
+                    <FormLabel>{t("step2.number_of_employees")}</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder={t("step2.number_of_employeesplaceholder")}
+                        {...field}
+                        className="border-muted-foreground text-muted-foreground dark:bg-gray-800"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            )}
 
+            {form.watch("selection") === "Active" && (
+              <FormField
+                control={form.control}
+                name="max_capital"
+                render={({ field }) => (
+                  <FormItem className="mt-4">
+                    <FormLabel>{t("step2.max_capital")}</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder={t("step2.max_capitalplaceholder")}
+                        {...field}
+                        className="border-muted-foreground text-muted-foreground dark:bg-gray-800"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             )}
 
             <DocumentInput />
@@ -274,7 +327,10 @@ export function RegisterForm({
                 variant={"outline"}
                 className="border-[#0E4815]
                text-[#0E4815] font-bold px-4 py-2 bg-white dark:bg-gray-800"
-                onClick={() => setStep((prev) => prev - 1)}
+                onClick={() => {
+                  form.clearErrors();
+                  setStep((prev) => prev - 1);
+                }}
               >
                 {t("step2.button2")}
               </Button>
@@ -302,10 +358,8 @@ export function RegisterForm({
             </div>
           </div>
 
-
           {/* Step 3 */}
           <RegisterFormStep3 step={step} setStep={setStep} />
-
         </form>
       </Form>
     </FormProvider>
