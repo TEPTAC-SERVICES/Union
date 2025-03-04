@@ -17,11 +17,10 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form'
-import { useLocale, useTranslations } from "next-intl"
+import { useLocale } from "next-intl"
 import { getLangDir } from "rtl-detect"
 
-export function CountrySelect() {
-  const t = useTranslations("RegisterPage")
+export function CountrySelect({name  , label , placeholder } : {name : string , label : string , placeholder : string}) {
   const locale = useLocale()
   const direction = getLangDir(locale)
   const { control } = useFormContext()
@@ -54,14 +53,14 @@ export function CountrySelect() {
   return (
     <FormField
       control={control}
-      name="contry"
+      name={name}
       render={({ field }) => (
         <FormItem>
-          <FormLabel>{t("step2.contryplaceholder")}</FormLabel>
+          <FormLabel>{label}</FormLabel>
           <FormControl>
             <Select onValueChange={field.onChange} defaultValue={field.value} >
               <SelectTrigger dir={direction} className='border-muted-foreground'>
-                <SelectValue placeholder={t("step2.contryplaceholder")} />
+                <SelectValue placeholder={placeholder} />
               </SelectTrigger>
               <SelectContent className='border-muted-foreground bg-white dark:bg-gray-800  '>
                 {countryList.map((country) => (

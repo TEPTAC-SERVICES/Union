@@ -14,6 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import TestimonialCaroussel from "@/components/TestimonialCaroussel";
+import { cn } from "@/lib/utils";
 
 const Home = () => {
   const t = useTranslations("HomePage");
@@ -22,7 +23,7 @@ const Home = () => {
   return (
     <div className=" min-h-screen  bg-white dark:bg-gray-800">
       {/* Hero */}
-      <div className=" h-auto flex flex-col items-center justify-center py-16 bg-gradient-to-r from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 relative gap-12 text-center">
+      <div className=" h-auto flex flex-col items-center justify-center py-16 bg-linear-to-r from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 relative gap-12 text-center">
         <Image
           src="/bglogo.svg"
           width={620}
@@ -37,24 +38,29 @@ const Home = () => {
           {t("Hero.subtitle")}
         </p>
         <div className="flex gap-5 flex-col md:flex-row font-amiri ">
-          <Button className="text-white bg-[#0E4815] px-12 py-8 font-bold text-[25px] hover:bg-[#092F0E]   z-10">
+          <Button className="text-white bg-[#0E4815] px-12 py-8 font-bold text-xl hover:bg-[#0a3610]   z-10">
             {t("Hero.button2")}
-            <ArrowUpLeft className="text-white" />
+            <ArrowUpLeft
+              className={cn(
+                "text-white",
+                direction === "ltr" ? "rotate-y-180" : ""
+              )}
+            />
           </Button>
-          <div className="group z-10">
-            <Button
-              variant="outline"
-              className="text-[#0E4815] border-[#0E4815] px-12 py-8 bg-transparent font-bold text-[25px] z-10 
-    group-hover:bg-[#0E4815] group-hover:text-white transition-all duration-200"
-            >
-              {t("Hero.button1")}
-              <ArrowUpLeft className="text-[#0E4815] group-hover:text-white transition-all duration-200" />
-            </Button>
-          </div>
+          <Button
+            variant="outline"
+            className="text-[#0E4815] border-[#0E4815] px-12 py-8 bg-transparent font-bold text-xl z-10
+              hover:bg-[#0E4815] hover:text-white transition-all duration-200"
+          >
+            {t("Hero.button1")}
+            <ArrowUpLeft
+              className={cn("  ", direction === "ltr" ? "rotate-y-180" : "")}
+            />
+          </Button>
         </div>
       </div>
       {/* Flags */}
-      <div className="flex overflow-x-hidden px-36 py-24 h-52 flex-row items-center justify-center relative pl-[25rem] bg-white dark:bg-gray-800">
+      <div className="flex overflow-hidden px-36 py-24 h-52 flex-row items-center justify-center relative pl-[25rem] bg-white dark:bg-gray-800">
         {/* Double the content for seamless looping */}
 
         <motion.div
@@ -77,7 +83,7 @@ const Home = () => {
                 width={120}
                 height={80}
                 alt={flag.name}
-                className="flex-shrink-0"
+                className="shrink-0"
               />
             );
           })}
@@ -199,10 +205,18 @@ const Home = () => {
       </div>
       {/*download*/}
       <div className="py-20 px-16 lg:px-36 bg-white dark:bg-gray-800">
-        <div className="py-20  bg-gradient-to-r  from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 rounded-2xl">
-          <h1 className="animated-gradient-text font-amiri font-bold text-5xl">
+        <div className="py-20  bg-linear-to-r  from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 rounded-2xl">
+          <h1 className="animated-gradient-text font-amiri font-bold text-5xl p-4">
             {t("download.title")}
           </h1>
+          <p className="font-amiri text-muted-foreground font-bold text-2xl p-4">
+            {t("download.content")}
+          </p>
+          <div className="flex w-full justify-end px-20 gap-10">
+          <Button className=""></Button>
+          <Button className=""></Button>
+          </div>
+
         </div>
       </div>
     </div>

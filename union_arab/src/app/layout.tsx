@@ -3,7 +3,7 @@ import { Geist, Geist_Mono , Amiri } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/Providers/AuthProvider";
 import { Toaster } from "@/components/ui/toaster"
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/Providers/theme-provider";
 
 
 

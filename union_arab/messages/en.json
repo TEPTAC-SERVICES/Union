@@ -1,4 +1,46 @@
 {
+  "Navbar": {
+    "home": "Home",
+    "organization": {
+      "title": "Organization",
+      "structure": "Union Organizational Structure",
+      "presidency": "Union Presidency",
+      "secretariat": "General Secretariat",
+      "board_of_directors": "Board of Directors"
+    },
+    "membership": {
+      "title": "Membership",
+      "benefits": "Membership Benefits",
+      "join": "Join Us",
+      "members_directory": "Members Directory"
+    },
+    "activities": {
+      "title": "News & Events",
+      "upcoming_events": "Upcoming Events",
+      "conferences": "Conferences",
+      "past_events": "Past Events"
+    },
+    "financing": {
+      "title": "Financing",
+      "info": "Funding Information",
+      "beneficiaries": "Funding Beneficiaries",
+      "statistics": "Statistics"
+    },
+    "documents": {
+      "title": "Documents",
+      "union_docs": "Union Documents",
+      "annual_report": "Annual Report",
+      "basic_law": "Basic Law"
+    },
+    "contact us": "Contact Us",
+    "select language": "Select Language:",
+    "login": "Login",
+    "register": "Register",
+    "select theme": "Select Theme",
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  },
+
   "HomePage": {
     "Hero": {
       "title": "Arab Union for Small Enterprises",
@@ -73,103 +115,98 @@
       }
     }
   },
-  "Navbar": {
-    "home": "Home",
-    "organization": "Organization",
-    "membership": "Membership",
-    "activities": "Activities",
-    "financing": "Financing",
-    "documents": "Documents",
-    "contact us": "Contact Us",
-    "login": "Login",
-    "register": "Register",
-    "documents_about": "Documents About the Union",
-    "annual_reports": "Annual Reports",
-    "financial_reports": "Financial Reports",
-    "law": "Basic Law",
-    "info_financing": "Financing Information"
-  },
   "footer": {
     "title": "Arab Union for Small Enterprises",
     "content": "All rights reserved"
   },
   "LoginPage": {
-    "greeting" : "Welcome Back",
-    "title" : "Enter your credentials to access your account", 
-    "email" : "Email",
-    "password" : "Password",
-    "button" : "Login",
-    "forgot" : "Forgot Password?",
-    "register" : "Don't have an account? Register Now",
+    "greeting": "Welcome Back",
+    "title": "Enter your credentials to access your account",
+    "email": "Email",
+    "password": "Password",
+    "button": "Login",
+    "forgot": "Forgot Password?",
+    "register": "Don't have an account? Register Now",
     "email_message": "Please enter a valid email address.",
     "password_message_1": "Password must be at least 6 characters long.",
     "password_message_2": "Password must contain at least one uppercase letter, one lowercase letter, and one number.",
-    "toast_success": "Welcome Back!", 
-    "toast_success_description" : "You have successfully logged in.",
+    "toast_success": "Welcome Back!",
+    "toast_success_description": "You have successfully logged in.",
     "toast_error": "Login Error. Please check your email and password."
   },
   "RegisterPage": {
-    "step1" : {
-      "title" : "Select Your Role",
-      "subtitle" : "Choose the role that suits you.",
-      "error"  :"Please select at least one role.",
-      "role1" : "Beneficiary Member",
-      "role2" : "Active Member",
-      "button" : "Next"
-    }, 
-    "step2" : {
-      "title" : "User Data",
-      "subtitle" : "Enter your data carefully.",
-      "firstname" : "First Name",
-      "firstnameplaceholder" : "Enter your first name",
-      "lastname" : "Last Name",
-      "lastnameplaceholder" : "Enter your last name",
-      "email" : "Email",
-      "emailplaceholder" : "Enter your email",
-      "cin"  : "CIN / Passport",
-      "cinplaceholder" : "Enter your CIN or passport number",
-      "cindescription" : "Provide your national ID card number (CIN) or passport number for verification.",
-      "contry" : "Country",
-      "contryplaceholder" : "Select your country",
-      "number" : "Phone Number",
-      "numberplaceholder" : "Enter your phone number",
-      "number2" : "Phone Number (optional)",
-      "number2placeholder" : "Enter your phone number (optional)",
-      "document" : "Upload Documents",
-      "documenttitle" : "Click to upload or drag and drop",
-      "documentsubtitle" : "PDF, DOC, DOCX, or image up to 2MB",
-      "documenterror" : "Please upload your documents.",
-      "documentdescription" : "Upload an official document as proof that your small business or start-up is legitimate. This may include a business registration certificate, tax identification number, or any other relevant legal document.",
-      "button1" : "Next",
-      "button2" : "Previous"
+    "step1": {
+      "title": "Select Your Role",
+      "subtitle": "Choose the role that suits you.",
+      "error": "Please select at least one role.",
+      "Affiliate Membership": "Beneficiary Member",
+      "Active Membership": "Active Member",
+      "button": "Next"
     },
-    "step3" : {
-      "title" :"Terms and Confirmation",
-      "subtitle" : "Read the terms and confirm.",
-      "term1title" : "1. Data Collection and Use",
-      "term1content" : "By submitting this form, you agree to the collection, processing, and storage of your personal information, including but not limited to your name, email address, national ID/passport number, and company details. This information will be used solely for identification, verification, and communication purposes.",
-      "term2title" : "2. Privacy and Confidentiality",
-      "term2content" : "We value your privacy. Any personal data submitted will be stored securely and will not be shared with third parties without your explicit consent, except as required by law or regulatory authorities.",
-      "checkbox" : "I agree to the terms and conditions",
-      "button1" : "Next",
-      "button2" : "Previous"
+    "step2": {
+      "title": "User Information",
+      "subtitle": "Please enter your details carefully.",
+      "firstname": "First Name",
+      "firstnameplaceholder": "Enter your first name",
+      "lastname": "Last Name",
+      "lastnameplaceholder": "Enter your last name",
+      "email": "Email",
+      "emailplaceholder": "Enter your email address",
+      "cin": "CIN / Passport",
+      "cinplaceholder": "Enter your CIN or passport number",
+      "cindescription": "Please provide your National Identity Number (CIN) or Passport Number for verification.",
+      "country": "Country",
+      "countryplaceholder": "Select a country",
+      "number": "Phone Number",
+      "numberplaceholder": "Enter your phone number",
+      "number2": "Phone Number (Optional)",
+      "number2placeholder": "Enter an optional phone number",
+      "document": "Upload Documents",
+      "documenttitle": "Click to upload or drag and drop",
+      "documentsubtitle": "PDF, DOC, DOCX, or image up to 2MB",
+      "documenterror": "Please upload your documents.",
+      "documentdescription": "Please upload an official document proving that your small business or startup is legitimate. This may include a company registration certificate, tax identification number, or any relevant legal document.",
+      "employees": "Number of Employees",
+      "employeesplaceholder": "Enter the number of employees",
+      "establishment": "Establishment Name",
+      "establishmentplaceholder": "Enter the establishment name",
+      "establishment_country": "Establishment Country",
+      "establishment_countryplaceholder": "Enter the establishment country",
+      "number_of_employees": "Number of Employees",
+      "number_of_employeesplaceholder": "Enter the number of employees",
+      "max_capital": "Expected Profit",
+      "max_capitalplaceholder": "Enter the expected profit",
+
+      "button1": "Next",
+      "button2": "Previous"
     },
-    "step4" : {
-      "title" : "Thank You for Registering",
-      "subtitle1" : "Your application has been successfully submitted.",
-      "subtitle2" : "We will review your application and contact you as soon as possible.",
-      "subsubtitle1" : "Check your email for updates on your application status.",
-      "subsubtitle2" : "If you have any inquiries, please contact us at",
-      "button1" : "Home Page",
-      "button2" : "Logout"
+    "step3": {
+      "title": "Terms and Confirmation",
+      "subtitle": "Read the terms and confirm.",
+      "term1title": "1. Data Collection and Use",
+      "term1content": "By submitting this form, you agree to the collection, processing, and storage of your personal information, including but not limited to your name, email address, national ID/passport number, and company details. This information will be used solely for identification, verification, and communication purposes.",
+      "term2title": "2. Privacy and Confidentiality",
+      "term2content": "We value your privacy. Any personal data submitted will be stored securely and will not be shared with third parties without your explicit consent, except as required by law or regulatory authorities.",
+      "checkbox": "I agree to the terms and conditions",
+      "button1": "Next",
+      "button2": "Previous"
     },
-    "stepsstatus" : {
-      "inprogress" : "In Progress",
-      "completed" : "Completed",
-      "pending" : "Pending",
-      "orcontinuewith" :"or continue with",
-      "google" :"Google",
-      "facebook" : "Facebook"
+    "step4": {
+      "title": "Thank You for Registering",
+      "subtitle1": "Your application has been successfully submitted.",
+      "subtitle2": "We will review your application and contact you as soon as possible.",
+      "subsubtitle1": "Check your email for updates on your application status.",
+      "subsubtitle2": "If you have any inquiries, please contact us at",
+      "button1": "Home Page",
+      "button2": "Logout"
+    },
+    "stepsstatus": {
+      "inprogress": "In Progress",
+      "completed": "Completed",
+      "pending": "Pending",
+      "orcontinuewith": "or continue with",
+      "google": "Google",
+      "facebook": "Facebook"
     }
   }
 }

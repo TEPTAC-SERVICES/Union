@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Heart, MessageCircle, Share2, MoreHorizontal, Trash2, Sparkles as WandSparkles, Loader2 } from 'lucide-react';
+import { Heart, MessageCircle, Share2, MoreHorizontal, Trash2, Sparkles as WandSparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
+/* import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input"; */
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,16 +14,16 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import axios from 'axios';
-import { explainpostPromt } from '@/lib/promts';
+/* import axios from 'axios';
+import { explainpostPromt } from '@/lib/promts'; */
 
 export function Post() {
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(142);
-  const [showAIDialog, setShowAIDialog] = useState(false);
+ /*  const [showAIDialog, setShowAIDialog] = useState(false);
   const [aiMessage, setAiMessage] = useState('Hi! I\'m your AI assistant. How can I help you analyze this post?');
   const [userMessage, setUserMessage] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false); */
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [posts, setPosts] = useState([  {
     text: "Just finished building a new feature for our app! 🚀 The power of React and TypeScript never ceases to amaze me. Clean code is happy code. What's your favorite tech stack?",
@@ -42,7 +42,7 @@ export function Post() {
     console.log('Post deleted!');
   };
 
-  const handleSendMessage = async () => {
+ /*  const handleSendMessage = async () => {
     if (userMessage.trim()) {
       try {
         setLoading(true);
@@ -64,7 +64,7 @@ export function Post() {
         setLoading(false);
       }
     }
-  };
+  }; */
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -101,8 +101,8 @@ export function Post() {
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   className="text-emerald-600 dark:text-emerald-400 focus:text-emerald-600 dark:focus:text-emerald-400 focus:bg-emerald-600/10"
-                  onClick={() => setShowAIDialog(true)}
-                >
+/*                   onClick={() => setShowAIDialog(true)}
+ */                >
                   <WandSparkles className="mr-2 h-4 w-4" />
                   Ask AI Assistant
                 </DropdownMenuItem>
@@ -155,14 +155,13 @@ export function Post() {
         </CardFooter>
       </Card>
 
-      <Dialog open={showAIDialog} onOpenChange={setShowAIDialog}>
+     {/*  <Dialog open={showAIDialog} onOpenChange={setShowAIDialog}>
         <DialogContent className="sm:max-w-[500px] bg-background border-border">
-          <DialogHeader>
-            <DialogTitle className="flex items-center space-x-2 text-emerald-600 dark:text-emerald-400">
+        <DialogTitle className="flex items-center space-x-2 text-emerald-600 dark:text-emerald-400">
               <WandSparkles className="h-5 w-5" />
-              <span>AI Assistant</span>
+              AI Assistant
             </DialogTitle>
-          </DialogHeader>
+         
           
           <div className="bg-emerald-50/50 dark:bg-emerald-950/20 rounded-lg p-4 my-4 border border-emerald-100 dark:border-emerald-900">
             <p className="text-sm text-foreground">{aiMessage}</p>
@@ -192,7 +191,7 @@ export function Post() {
             </Button>
           </DialogFooter>
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </div>
   );
 }

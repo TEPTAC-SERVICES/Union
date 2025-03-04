@@ -89,7 +89,7 @@ export function PostInput() {
                 bg-gray-100 dark:bg-[#1f1f1f]
                 text-gray-900 dark:text-gray-100 
                 px-4 py-3 rounded-lg 
-                focus:outline-none 
+                focus:outline-hidden 
                 focus:ring-2 focus:ring-emerald-500 
                 placeholder-gray-500 dark:placeholder-gray-400 
                 resize-none transition-all duration-200
