@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { getLangDir } from "rtl-detect";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { Card, CardContent } from "./ui/card";
 import Caroussel_Steps from "./Caroussel_Steps";
-
+import TestimonialCarousselFrame from "./TestimonialCarousselFrame";
+import { testimonials } from "@/lib/constants";
 const TestimonialCaroussel = () => {
     const locale = useLocale();
     const direction = getLangDir(locale);
@@ -35,15 +35,13 @@ const TestimonialCaroussel = () => {
             setApi={setApi}
         >
             <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 max-w-sm h-auto">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
+            {testimonials.map((item, index) => (
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 max-w-sm h-auto aspect-square">
+            <TestimonialCarousselFrame
+              name={item.name}
+              job={item.job}
+              comment={item.comment}
+            />
           </CarouselItem>
         ))}
             </CarouselContent>
