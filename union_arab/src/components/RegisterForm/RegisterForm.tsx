@@ -80,6 +80,7 @@ export function RegisterForm({
   /*   console.log("radio value : ", form.watch("selection"));
    */
 
+    console.log("form values : ", form.getValues());
   return (
     <FormProvider {...form}>
       <Form {...form}>
@@ -133,6 +134,8 @@ export function RegisterForm({
                   const isValid = await form.trigger("selection");
                   if (isValid) {
                     setStep((prev) => prev + 1);
+                    form.clearErrors();
+
                   }
                 }}
                 className="mt-4 text-lg text-white font-amiri bg-[#0E4815] hover:bg-[#092F0E] px-4 py-2"
@@ -346,9 +349,12 @@ export function RegisterForm({
                     "number2",
                     "country",
                     "document",
+                    "establishment"
                   ]);
                   if (isValid) {
                     setStep((prev) => prev + 1);
+                    form.clearErrors();
+
                   }
                 }}
                 className="mt-4 text-lg text-white font-amiri bg-[#0E4815] hover:bg-[#092F0E] px-4 py-2"

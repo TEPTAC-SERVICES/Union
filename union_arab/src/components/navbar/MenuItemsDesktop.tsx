@@ -1,7 +1,7 @@
 "use client"
 import { useNavigationItems } from '@/hooks/useNavigationItems';
 import { Link } from '@/i18n/routing';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import React, { useRef, useState } from 'react'
 import {
     Popover,
@@ -10,10 +10,13 @@ import {
   } from "@/components/ui/popover"
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { getLangDir } from 'rtl-detect';
 const MenuItemsDesktop = () => {
     const [openPopover, setOpenPopover] = useState<string | null>(null);
      const t = useTranslations('Navbar');
       const navigationItems = useNavigationItems();
+      const locale = useLocale();
+      const direction = getLangDir(locale);
   
     // Refs for hover detection
     const popoverRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
@@ -35,7 +38,7 @@ const MenuItemsDesktop = () => {
           if (openPopover === key) {
             setOpenPopover(null);
           }
-        }, 30); 
+        }, 10); // 150ms delay
       };
   return (
     <nav className='hidden 2xl:flex gap-8 font-amiri text-lg font-normal'>
@@ -64,7 +67,7 @@ const MenuItemsDesktop = () => {
               />
             </button>
           </PopoverTrigger>
-          <PopoverContent className="w-64 p-0 bg-white dark:bg-gray-800 border-muted-foreground" sideOffset={16}>
+          <PopoverContent className="w-64 p-0 bg-white dark:bg-gray-800 border-muted-foreground" sideOffset={16} dir={direction}>
             <div className="grid gap-1 p-2">
               {item.items.map((subItem) => (
                 <Link 

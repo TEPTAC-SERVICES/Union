@@ -16,6 +16,7 @@ import {
 import TestimonialCaroussel from "@/components/TestimonialCaroussel";
 import { cn } from "@/lib/utils";
 
+
 const Home = () => {
   const t = useTranslations("HomePage");
   const locale = useLocale();
@@ -205,16 +206,50 @@ const Home = () => {
       </div>
       {/*download*/}
       <div className="py-20 px-16 lg:px-36 bg-white dark:bg-gray-800">
-        <div className="py-20  bg-linear-to-r  from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 rounded-2xl">
+        <div className="py-20  bg-linear-to-r px-20 from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 rounded-2xl">
           <h1 className="animated-gradient-text font-amiri font-bold text-5xl p-4">
             {t("download.title")}
           </h1>
           <p className="font-amiri text-muted-foreground font-bold text-2xl p-4">
             {t("download.content")}
           </p>
-          <div className="flex w-full justify-end px-20 gap-10">
-          <Button className=""></Button>
-          <Button className=""></Button>
+          <div className="flex w-full justify-end  gap-10">
+          <Button 
+          asChild
+          className="bg-black hover:bg-gray-900 text-white h-auto py-3 px-5 rounded-xl"
+        >
+          <a href="#"  className="flex items-center">
+            <div className="flex-1 text-right">
+              <p className="text-xs opacity-80">احصل عليه من</p>
+              <p className="text-lg font-semibold">جوجل بلاي</p>
+            </div>
+            <Image
+              src="/googleplay.svg"
+              width={32}
+              height={32}
+              alt="googleplay"
+            />
+          </a>
+        </Button>
+        
+        {/* App Store Button */}
+        <Button 
+          asChild
+          className="bg-black hover:bg-gray-900 text-white h-auto py-3 px-5 rounded-xl"
+        >
+          <a href="#" dir="rtl" className="flex items-center">
+            <div className="flex-1 ">
+              <p className="text-xs opacity-80">تنزيل من</p>
+              <p className="text-lg font-semibold">متجر آبل</p>
+            </div>
+           <Image
+              src="/Apple.svg"
+              width={32}
+              height={32}
+              alt="apple"
+            />
+          </a>
+        </Button>
           </div>
 
         </div>
