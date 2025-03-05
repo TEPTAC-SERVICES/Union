@@ -1,19 +1,18 @@
 "use client"
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { getLangDir } from "rtl-detect";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Caroussel_Steps from "./Caroussel_Steps";
 import TestimonialCarousselFrame from "./TestimonialCarousselFrame";
-import { testimonials } from "@/lib/constants";
 const TestimonialCaroussel = () => {
     const locale = useLocale();
     const direction = getLangDir(locale);
+    const t = useTranslations("HomePage.testimonial.content");
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
     const [count, setCount] = useState(0)
-
     useEffect(() => {
         if (!api) return
         setCount(api.scrollSnapList().length)
@@ -35,12 +34,12 @@ const TestimonialCaroussel = () => {
             setApi={setApi}
         >
             <CarouselContent>
-            {testimonials.map((item, index) => (
+            {[1,2,3,4,5].map((_, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 max-w-sm h-auto aspect-square">
             <TestimonialCarousselFrame
-              name={item.name}
-              job={item.job}
-              comment={item.comment}
+              name={t(`name${index + 1}`)}
+              job={t(`job${index + 1}`)}
+              comment={t(`comment${index + 1}`)}
             />
           </CarouselItem>
         ))}

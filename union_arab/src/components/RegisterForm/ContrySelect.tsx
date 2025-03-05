@@ -1,8 +1,5 @@
 "use client"
-
-import { useEffect, useState } from 'react'
 import { useFormContext } from 'react-hook-form'
-import countries from 'i18n-iso-countries'
 import {
   Select,
   SelectTrigger,
@@ -17,38 +14,48 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form'
-import { useLocale } from "next-intl"
-import { getLangDir } from "rtl-detect"
 
-export function CountrySelect({name  , label , placeholder } : {name : string , label : string , placeholder : string}) {
-  const locale = useLocale()
-  const direction = getLangDir(locale)
+import { getLangDir } from 'rtl-detect'
+import { useLocale, useTranslations } from 'next-intl'
+
+const countryList = [
+  { value: 'DZ' },
+  { value: 'BH' },
+  { value: 'KM' },
+  { value: 'DJ' },
+  { value: 'EG' },
+  { value: 'IQ' },
+  { value: 'JO' },
+  { value: 'KW' },
+  { value: 'LB' },
+  { value: 'LY' },
+  { value: 'MR' },
+  { value: 'MA' },
+  { value: 'OM' },
+  { value: 'PS' },
+  { value: 'QA' },
+  { value: 'SA' },
+  { value: 'SO' },
+  { value: 'SD' },
+  { value: 'SY' },
+  { value: 'TN' },
+  { value: 'AE' },
+  { value: 'YE' },
+]
+
+export function CountrySelect({ name, label, placeholder }: { name: string; label: string; placeholder: string }) {
   const { control } = useFormContext()
-  const [countryList, setCountryList] = useState<Array<{ value: string; label: string }>>([])
+  const  t = useTranslations()
+  const locale = useLocale();
+    const direction = getLangDir(locale);
 
-  useEffect(() => {
-    const loadCountries = async () => {
-      try {
-        const localeModule = await import(`i18n-iso-countries/langs/${locale}.json`)
-        countries.registerLocale(localeModule)
-      } catch (error) {
-        console.log(error)
-        const enModule = await import('i18n-iso-countries/langs/en.json')
-        countries.registerLocale(enModule)
-      }
+  const countriesTranslated = countryList.map((country) => ({
+    value: country.value,
+    label: t(`countries.${country.value}`)
+  }))
 
-      const countryCodes = Object.keys(countries.getAlpha2Codes())
-      const countryOptions = countryCodes.map((code) => ({
-        value: code,
-        label: countries.getName(code, locale) || code,
-      }))
-
-      countryOptions.sort((a, b) => a.label.localeCompare(b.label, locale))
-      setCountryList(countryOptions)
-    }
-
-    loadCountries()
-  }, [locale])
+  // Sort the list based on the current locale’s collator
+  countriesTranslated.sort((a, b) => a.label.localeCompare(b.label, locale));
 
   return (
     <FormField
@@ -59,18 +66,18 @@ export function CountrySelect({name  , label , placeholder } : {name : string , 
           <FormLabel>{label}</FormLabel>
           <FormControl>
             <Select onValueChange={field.onChange} defaultValue={field.value} >
-              <SelectTrigger dir={direction} className='border-muted-foreground'>
+              <SelectTrigger dir={direction} className="border-muted-foreground py-2">
                 <SelectValue placeholder={placeholder} />
               </SelectTrigger>
-              <SelectContent className='border-muted-foreground bg-white dark:bg-gray-800  '>
-                {countryList.map((country) => (
-                  <SelectItem 
-                  className='border-muted-foreground bg-white dark:bg-gray-800 text-muted-foreground '
-                    key={country.value} 
+              <SelectContent className="border-muted-foreground bg-white dark:bg-gray-800">
+                {countriesTranslated.map((country) => (
+                  <SelectItem
+                    key={country.value}
                     value={country.value}
                     dir={direction}
+                    className="border-muted-foreground bg-white dark:bg-gray-800 text-muted-foreground"
                   >
-                    <p className='text-muted-foreground'>{country.label}</p>
+                    <p className="text-muted-foreground">{country.label}</p>
                   </SelectItem>
                 ))}
               </SelectContent>

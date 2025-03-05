@@ -205,7 +205,7 @@ const Home = () => {
         <TestimonialCaroussel />
       </div>
       {/*download*/}
-      <div className="py-20 px-16 lg:px-36 bg-white dark:bg-gray-800">
+      <div className="py-20 px-16 lg:px-36 bg-white dark:bg-gray-800" dir={direction}>
         <div className="py-20  bg-linear-to-r px-20 from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 rounded-2xl">
           <h1 className="animated-gradient-text font-amiri font-bold text-5xl p-4">
             {t("download.title")}
@@ -216,38 +216,42 @@ const Home = () => {
           <div className="flex w-full justify-end  gap-10">
           <Button 
           asChild
-          className="bg-black hover:bg-gray-900 text-white h-auto py-3 px-5 rounded-xl"
+          className="bg-black hover:bg-gray-900 text-white h-auto py-3 px-5 rounded-xl w-56"
         >
-          <a href="#"  className="flex items-center">
-            <div className="flex-1 text-right">
-              <p className="text-xs opacity-80">احصل عليه من</p>
-              <p className="text-lg font-semibold">جوجل بلاي</p>
-            </div>
-            <Image
+          <a href="#"  className="flex items-center"           dir={direction}
+          >
+          <Image
               src="/googleplay.svg"
               width={32}
               height={32}
               alt="googleplay"
             />
+            <div className={cn("flex-1 text-left" , direction==="rtl" && "text-right")}>
+              <p className="text-xs opacity-80">{t("download.button1.title")}</p>
+              <p className="text-lg font-semibold">{t("download.button1.content")}</p>
+            </div>
+            
           </a>
         </Button>
         
         {/* App Store Button */}
         <Button 
           asChild
-          className="bg-black hover:bg-gray-900 text-white h-auto py-3 px-5 rounded-xl"
+          className="bg-black hover:bg-gray-900 text-white h-auto py-3 px-5 rounded-xl w-56"
         >
-          <a href="#" dir="rtl" className="flex items-center">
-            <div className="flex-1 ">
-              <p className="text-xs opacity-80">تنزيل من</p>
-              <p className="text-lg font-semibold">متجر آبل</p>
-            </div>
-           <Image
+          <a href="#"  className="flex items-center"           dir={direction}
+          >
+          <Image
               src="/Apple.svg"
               width={32}
               height={32}
-              alt="apple"
+              alt="appstore"
             />
+            <div className={cn("flex-1 text-left" , direction==="rtl" && "text-right")}>
+            <p className="text-xs opacity-80 ">{t("download.button2.title")}</p>
+              <p className="text-lg font-semibold">{t("download.button2.content")}</p>
+            </div>
+            
           </a>
         </Button>
           </div>

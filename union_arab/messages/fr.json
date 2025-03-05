@@ -84,23 +84,34 @@
     "testimonial": {
       "title1": "On parle",
       "title2": "de nous",
-      "content": [
-        {
-          "name": "Mohamed Al Arabi",
-          "position": "Entrepreneur",
-          "quote": "L'Union a contribué au développement de mon idée et à sa transformation en un projet réussi."
-        },
-        {
-          "name": "Sarah Al Arabi",
-          "position": "Entrepreneuse",
-          "quote": "L'Union fournit le soutien financier et technique nécessaire à la réussite des petites entreprises."
-        },
-        {
-          "name": "Ahmed Al Arabi",
-          "position": "Entrepreneur",
-          "quote": "L'Union offre un environnement encourageant pour les petites entreprises."
+      
+        "content": {
+          
+            "name1": "Mohamed Al Arabi",
+            "job1": "Entrepreneur",
+            "comment1": "L'Union m'a aidé à développer mon idée et à la transformer en un projet réussi.",
+          
+            "name2": "Sarah Al Arabi",
+            "job2": "Entrepreneur",
+            "comment2": "L'Union fournit le soutien financier et technique nécessaire à la réussite des petites entreprises.",
+       
+            "name3": "Ahmed Al Arabi",
+            "job3": "Entrepreneur",
+            "comment3": "L'Union offre un environnement encourageant pour les petites entreprises.",
+          
+            "name4": "Laila Al-Hussein",
+            "job4": "Propriétaire de petite entreprise",
+            "comment4": "La plateforme m'a permis de collaborer avec des partenaires, m'aidant à obtenir des financements pour développer mon activité.",
+
+
+        
+            "name5": "Sami Al-Jabbar",
+            "job5": "Entrepreneur",
+            "comment5": "Grâce au bot intelligent intégré, j'ai reçu des consultations sur mesure qui m'ont aidé à améliorer la performance de mon entreprise."
+          
         }
-      ]
+      
+      
     },
     "download": {
       "title": "Téléchargez notre application maintenant",
@@ -145,7 +156,7 @@
     },
 
     "step2": {
-      "title": "Informations de l'utilisateur",
+      "title": "Informations de registrement",
       "subtitle": "Veuillez entrer vos informations avec soin.",
       "firstname": "Prénom",
       "firstnameplaceholder": "Entrez votre prénom",
@@ -206,6 +217,33 @@
       "orcontinuewith": "ou continuer avec",
       "google": "Google",
       "facebook": "Facebook"
-    }
+    },
+    
+      "countries": {
+        "DZ": "Algérie",
+        "BH": "Bahreïn",
+        "KM": "Comores",
+        "DJ": "Djibouti",
+        "EG": "Égypte",
+        "IQ": "Irak",
+        "JO": "Jordanie",
+        "KW": "Koweït",
+        "LB": "Liban",
+        "LY": "Libye",
+        "MR": "Mauritanie",
+        "MA": "Maroc",
+        "OM": "Oman",
+        "PS": "Palestine",
+        "QA": "Qatar",
+        "SA": "Arabie Saoudite",
+        "SO": "Somalie",
+        "SD": "Soudan",
+        "SY": "Syrie",
+        "TN": "Tunisie",
+        "AE": "Émirats arabes unis",
+        "YE": "Yémen"
+      }
+    
+    
   }
 }

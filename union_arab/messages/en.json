@@ -84,23 +84,27 @@
     "testimonial": {
       "title1": "They Talk",
       "title2": "About Us",
-      "content": [
-        {
-          "name": "Mohamed Al Arabi",
-          "position": "Entrepreneur",
-          "quote": "The Union helped develop my idea and turn it into a successful project."
-        },
-        {
-          "name": "Sarah Al Arabi",
-          "position": "Entrepreneur",
-          "quote": "The Union provides the necessary financial and technical support for the success of small businesses."
-        },
-        {
-          "name": "Ahmed Al Arabi",
-          "position": "Entrepreneur",
-          "quote": "The Union offers an encouraging environment for small businesses."
-        }
-      ]
+    
+          "content": {
+            "name1": "Mohamed Al Arabi",
+            "job1": "Entrepreneur",
+            "comment1": "The Union helped me develop my idea and turn it into a successful project.",
+            "name2": "Sarah Al Arabi",
+            "job2": "Entrepreneur",
+            "comment2": "The Union provides the financial and technical support necessary for the success of small businesses.",
+            "name3": "Ahmed Al Arabi",
+            "job3": "Entrepreneur",
+            "comment3": "The Union offers an encouraging environment for small businesses.",
+            "name4": "Laila Al-Hussein",
+            "job4": "Small Business Owner",
+            "comment4":"The platform connected me with like-minded organizations, securing funding to grow my business.",
+            "name5": "Sami Al-Jabbar",
+            "job5": "Entrepreneur",
+            "comment5": "Thanks to the integrated smart bot, I received tailored consultations that helped me improve my business performance."
+          }
+        
+      
+        
     },
     "download": {
       "title": "Download Our App Now",
@@ -144,7 +148,7 @@
       "button": "Next"
     },
     "step2": {
-      "title": "User Information",
+      "title": "ٌRegistration Information",
       "subtitle": "Please enter your details carefully.",
       "firstname": "First Name",
       "firstnameplaceholder": "Enter your first name",
@@ -208,5 +212,32 @@
       "google": "Google",
       "facebook": "Facebook"
     }
-  }
+  },
+  
+    "countries": {
+      "DZ": "Algeria",
+      "BH": "Bahrain",
+      "KM": "Comoros",
+      "DJ": "Djibouti",
+      "EG": "Egypt",
+      "IQ": "Iraq",
+      "JO": "Jordan",
+      "KW": "Kuwait",
+      "LB": "Lebanon",
+      "LY": "Libya",
+      "MR": "Mauritania",
+      "MA": "Morocco",
+      "OM": "Oman",
+      "PS": "Palestine",
+      "QA": "Qatar",
+      "SA": "Saudi Arabia",
+      "SO": "Somalia",
+      "SD": "Sudan",
+      "SY": "Syria",
+      "TN": "Tunisia",
+      "AE": "United Arab Emirates",
+      "YE": "Yemen"
+    }
+  
+  
 }
