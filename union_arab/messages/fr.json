@@ -60,8 +60,9 @@
         }
       ]
     },
+    
     "download": {
-      "title": "Téléchargez notre application maintenant",
+      "title": "Téléchargez notnre application maintenant",
       "content": "Découvrez les avantages de notre application conçue spécialement pour répondre à vos besoins quotidiens.",
       "button1": {
         "title": "Obtenez-le maintenant",
