@@ -133,9 +133,7 @@ const Page = () => {
     }
   };
 
-  const handleSocialLogin = (provider: string) => {
-    window.location.href = `${BackendURL}/api/auth/${provider}`;
-  };
+
 
   return (
     <div className="flex items-stretch justify-center min-h-screen bg-white dark:bg-gray-800">
@@ -152,7 +150,7 @@ const Page = () => {
         </h1>
       </div>
       <div className="flex w-full flex-col items-center justify-center lg:w-1/2">
-        <div className="space-y-8 w-full max-w-md px-4">
+        <div className="space-y-8 w-full max-w-md px-4 pt-32">
           <div className="space-y-4">
             <h1 className="text-3xl  font-bold font-amiri text-center pb-20">
               {t("title")}
@@ -176,7 +174,7 @@ const Page = () => {
                           dir={direction}
                           placeholder="john@example.com"
                           {...field}
-                          className="w-full focus:ring-[#0E4815] focus:ring-2"
+                          className="w-full focus:ring-[#0E4815] focus:ring-2 border-muted-foreground bg-white dark:bg-gray-800"
                         />
                       </FormControl>
                       <FormMessage />
@@ -198,7 +196,7 @@ const Page = () => {
                           type="password"
                           placeholder="••••••••"
                           {...field}
-                          className="w-full focus:ring-[#0E4815] focus:ring-2"
+                          className="w-full focus:ring-[#0E4815] focus:ring-2 border-muted-foreground bg-white dark:bg-gray-800"
                         />
                       </FormControl>
                       <FormMessage />
@@ -214,7 +212,7 @@ const Page = () => {
                   {isLoading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      جاري تسجيل الدخول...
+                      {t("loading")}
                     </>
                   ) : (
                     t("button")
@@ -223,49 +221,17 @@ const Page = () => {
               </form>
             </Form>
 
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t" />
-              </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-background px-2 text-muted-foreground">
-                  أو قم بتسجيل الدخول بواسطة
-                </span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={() => handleSocialLogin("facebook")}
-                disabled={isLoading}
-              >
-                <Image
-                  src="/facebook.svg"
-                  width={20}
-                  height={20}
-                  alt="facebook"
-                />
-                فيسبوك
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={() => handleSocialLogin("google")}
-                disabled={isLoading}
-              >
-                <Image src="/google.svg" width={20} height={20} alt="google" />
-                جوجل
-              </Button>
-            </div>
-
+            <div className="flex flex-col items-center justify-center gap-2.5">
             <p className="text-sm text-center text-gray-500">
-              لم يتم إنشاء حساب؟{" "}
+              {t("no_account")}
               <Link href="/signup" className="text-[#0E4815] hover:underline">
-                إنشاء حساب
+               {t("register")}
               </Link>
             </p>
+            <Link href="/forget_password " className="text-[#AE9113] hover:underline text-center w-full">
+            {t("forgot")}
+            </Link>
+            </div>
           </div>
         </div>
       </div>

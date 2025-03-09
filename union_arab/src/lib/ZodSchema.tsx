@@ -5,8 +5,48 @@ import * as z from "zod";
 
 export const CreateMembershipSchema = () => {
   const t = useTranslations("RegisterPage");
+  return z.object({
+    member_type: z
+      .enum(["Affiliate", "Active", "Expert"])
+      .refine(() => true, { message: t("step1.error") }),
+    entity_name: z.string().min(1, t("step2.entity_nameplaceholder")),
+    entity_type: z.string().min(1, t("step2.entity_type.placeholder")),
 
-  return z.discriminatedUnion("selection", [
+    action_type: z
+      .discriminatedUnion("type", [
+        z.object({
+          type: z.enum(["financing", "training", "marketing"]),
+          custom: z.string().optional(),
+        }),
+        z.object({
+          type: z.literal("other"),
+          custom: z.string().min(1, { message: "Custom action type required" }),
+        }),
+      ])
+      .default({ type: "financing" })
+      .refine((val) => val.type !== "other" || !!val.custom, {
+        message: "Custom action type required",
+        path: ["custom"],
+      }),
+
+    establishment_name: z
+      .string()
+      .min(1, t("step2.establishment_nameplaceholder")),
+    establishment_country: z
+      .string()
+      .min(1, t("step2.establishment_countryplaceholder")),
+    number: z.string().min(1, t("step2.numberplaceholder")),
+    email: z.string().email(t("step2.emailplaceholder")),
+    website: z.string().min(1, t("step2.websiteplaceholder")),
+    delegation: z.string().min(1, t("step2.delegationplaceholder")),
+    name: z.string().min(1, t("step2.nameplaceholder")),
+    job: z.string().min(1, t("step2.jobplaceholder")),
+    document: z.instanceof(File, {
+      message: t("step2.documenterror"),
+    }),
+  });
+
+  /*   return z.discriminatedUnion("selection", [
     // Affiliate Membership schema
     z.object({
       selection: z.literal("Affiliate"),
@@ -47,5 +87,5 @@ export const CreateMembershipSchema = () => {
       max_capital: z.string().min(1, t("step2.max_capitalplaceholder")),
       
     }),
-  ]);
+  ]); */
 };

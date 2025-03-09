@@ -16,43 +16,18 @@ import {
 } from '@/components/ui/form'
 
 import { getLangDir } from 'rtl-detect'
-import { useLocale, useTranslations } from 'next-intl'
+import { useLocale } from 'next-intl'
+import { Arab_contries } from '@/lib/constants'
 
-const countryList = [
-  { value: 'DZ' },
-  { value: 'BH' },
-  { value: 'KM' },
-  { value: 'DJ' },
-  { value: 'EG' },
-  { value: 'IQ' },
-  { value: 'JO' },
-  { value: 'KW' },
-  { value: 'LB' },
-  { value: 'LY' },
-  { value: 'MR' },
-  { value: 'MA' },
-  { value: 'OM' },
-  { value: 'PS' },
-  { value: 'QA' },
-  { value: 'SA' },
-  { value: 'SO' },
-  { value: 'SD' },
-  { value: 'SY' },
-  { value: 'TN' },
-  { value: 'AE' },
-  { value: 'YE' },
-]
 
 export function CountrySelect({ name, label, placeholder }: { name: string; label: string; placeholder: string }) {
   const { control } = useFormContext()
-  const  t = useTranslations()
   const locale = useLocale();
     const direction = getLangDir(locale);
 
-  const countriesTranslated = countryList.map((country) => ({
-    value: country.value,
-    label: t(`countries.${country.value}`)
-  }))
+  
+    const countriesTranslated = Arab_contries()
+
 
   // Sort the list based on the current locale’s collator
   countriesTranslated.sort((a, b) => a.label.localeCompare(b.label, locale));
@@ -66,7 +41,7 @@ export function CountrySelect({ name, label, placeholder }: { name: string; labe
           <FormLabel>{label}</FormLabel>
           <FormControl>
             <Select onValueChange={field.onChange} defaultValue={field.value} >
-              <SelectTrigger dir={direction} className="border-muted-foreground py-2">
+              <SelectTrigger dir={direction} className="border-muted-foreground py-5">
                 <SelectValue placeholder={placeholder} />
               </SelectTrigger>
               <SelectContent className="border-muted-foreground bg-white dark:bg-gray-800">

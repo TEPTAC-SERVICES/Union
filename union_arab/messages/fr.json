@@ -84,34 +84,28 @@
     "testimonial": {
       "title1": "On parle",
       "title2": "de nous",
-      
-        "content": {
-          
-            "name1": "Mohamed Al Arabi",
-            "job1": "Entrepreneur",
-            "comment1": "L'Union m'a aidé à développer mon idée et à la transformer en un projet réussi.",
-          
-            "name2": "Sarah Al Arabi",
-            "job2": "Entrepreneur",
-            "comment2": "L'Union fournit le soutien financier et technique nécessaire à la réussite des petites entreprises.",
-       
-            "name3": "Ahmed Al Arabi",
-            "job3": "Entrepreneur",
-            "comment3": "L'Union offre un environnement encourageant pour les petites entreprises.",
-          
-            "name4": "Laila Al-Hussein",
-            "job4": "Propriétaire de petite entreprise",
-            "comment4": "La plateforme m'a permis de collaborer avec des partenaires, m'aidant à obtenir des financements pour développer mon activité.",
 
+      "content": {
+        "name1": "Mohamed Al Arabi",
+        "job1": "Entrepreneur",
+        "comment1": "L'Union m'a aidé à développer mon idée et à la transformer en un projet réussi.",
 
-        
-            "name5": "Sami Al-Jabbar",
-            "job5": "Entrepreneur",
-            "comment5": "Grâce au bot intelligent intégré, j'ai reçu des consultations sur mesure qui m'ont aidé à améliorer la performance de mon entreprise."
-          
-        }
-      
-      
+        "name2": "Sarah Al Arabi",
+        "job2": "Entrepreneur",
+        "comment2": "L'Union fournit le soutien financier et technique nécessaire à la réussite des petites entreprises.",
+
+        "name3": "Ahmed Al Arabi",
+        "job3": "Entrepreneur",
+        "comment3": "L'Union offre un environnement encourageant pour les petites entreprises.",
+
+        "name4": "Laila Al-Hussein",
+        "job4": "Propriétaire de petite entreprise",
+        "comment4": "La plateforme m'a permis de collaborer avec des partenaires, m'aidant à obtenir des financements pour développer mon activité.",
+
+        "name5": "Sami Al-Jabbar",
+        "job5": "Entrepreneur",
+        "comment5": "Grâce au bot intelligent intégré, j'ai reçu des consultations sur mesure qui m'ont aidé à améliorer la performance de mon entreprise."
+      }
     },
     "download": {
       "title": "Téléchargez notre application maintenant",
@@ -131,119 +125,135 @@
     "content": "Tous droits réservés"
   },
   "LoginPage": {
-    "greeting": "Bon retour",
+    "greeting": "Bienvenue de retour",
     "title": "Entrez vos identifiants pour accéder à votre compte",
     "email": "E-mail",
     "password": "Mot de passe",
     "button": "Se connecter",
     "forgot": "Mot de passe oublié ?",
-    "register": "Vous n'avez pas de compte ? Inscrivez-vous maintenant",
+    "no_account": "Vous n'avez pas de compte ?",
+    "register": "Inscrivez-vous maintenant",
+    "loading": "Chargement en cours...",
     "email_message": "Veuillez entrer une adresse e-mail valide.",
     "password_message_1": "Le mot de passe doit contenir au moins 6 caractères.",
     "password_message_2": "Le mot de passe doit contenir au moins une majuscule, une minuscule et un chiffre.",
-    "toast_success": "Bon retour !",
-    "toast_success_description": "Vous êtes connecté avec succès.",
-    "toast_error": "Erreur de connexion. Veuillez vérifier votre e-mail et votre mot de passe."
+    "toast_success": "Bienvenue de retour !",
+    "toast_success_description": "Vous vous êtes connecté avec succès.",
+    "toast_error": "Échec de la connexion. Veuillez vérifier votre e-mail et votre mot de passe."
   },
+
   "RegisterPage": {
     "step1": {
-      "title": "Sélectionnez votre rôle",
+      "title": "Sélectionnez Votre Rôle",
       "subtitle": "Choisissez le rôle qui vous convient.",
       "error": "Veuillez sélectionner au moins un rôle.",
-      "Affiliate Membership": "Membre bénéficiaire",
-      "Active Membership": "Membre actif",
+      "Affiliate Membership": "Membre Affilié",
+      "Active Membership": "Membre Actif",
+      "Expert Membership": "Membre Expert",
       "button": "Suivant"
     },
-
     "step2": {
-      "title": "Informations de registrement",
+      "title": "Détails de l'Inscription",
       "subtitle": "Veuillez entrer vos informations avec soin.",
-      "firstname": "Prénom",
-      "firstnameplaceholder": "Entrez votre prénom",
-      "lastname": "Nom de famille",
-      "lastnameplaceholder": "Entrez votre nom de famille",
-      "email": "Email",
-      "emailplaceholder": "Entrez votre adresse e-mail",
-      "cin": "CIN / Passeport",
-      "cinplaceholder": "Entrez votre CIN ou numéro de passeport",
-      "cindescription": "Veuillez fournir votre numéro d'identité nationale (CIN) ou numéro de passeport pour vérification.",
-      "country": "Pays",
-      "countryplaceholder": "Choisissez un pays",
-      "number": "Numéro de téléphone",
-      "numberplaceholder": "Entrez votre numéro de téléphone",
-      "number2": "Numéro de téléphone (optionnel)",
-      "number2placeholder": "Entrez un numéro de téléphone (optionnel)",
-      "document": "Télécharger les documents",
-      "documenttitle": "Cliquez pour télécharger ou glissez-déposez",
+      "entity_name": "Nom de l'Entité",
+      "entity_nameplaceholder": "Entrez le nom de l'entité",
+      "entity_type": {
+        "title": "Type d'Entité",
+        "placeholder": "Entrez le type d'entité",
+        "options": {
+          "government": "Organismes/Institutions Gouvernementales",
+          "regional_organizations": "Organisations Régionales",
+          "private_companies": "Entreprises/Institutions du Secteur Privé",
+          "associations": "Associations/Fédérations et Institutions Non Bancaires",
+          "small_projects": "Propriétaires de Petites Entreprises",
+          "consulting_offices": "Bureaux de Conseil",
+          "chambers_of_commerce": "Chambres de Commerce et d'Industrie dans les Pays Arabes / Fédérations Spécialisées",
+          "expert_houses": "Cabinets d'Experts et Organisations Internationales de Développement"
+        }
+      },
+      "entity_typeplaceholder": "Entrez le type d'entité",
+      "action_type": {
+        "title": "Type d'Activité",
+        "placeholder": "Entrez le type d'activité",
+        "options": {
+          "financing": "Financement",
+          "training": "Formation",
+          "marketing": "Marketing",
+          "other": "Autre"
+        }
+      },
+      "establishment_name": "Siège",
+      "establishment_nameplaceholder": "Entrez le nom du siège",
+      "establishment_country": "Pays",
+      "establishment_countryplaceholder": "Entrez le pays",
+      "number": "Numéro de Téléphone",
+      "numberplaceholder": "Entrez le numéro de téléphone",
+      "email": "E-mail",
+      "emailplaceholder": "Entrez l'e-mail",
+      "website": "Site Web",
+      "websiteplaceholder": "Entrez le site web",
+      "delegation": "Délégation",
+      "delegationplaceholder": "Entrez la délégation",
+      "name": "Nom",
+      "nameplaceholder": "Entrez le nom",
+      "job": "Titre du Poste",
+      "jobplaceholder": "Entrez le titre du poste",
+      "document": "Télécharger les Documents",
+      "documenttitle": "Cliquez pour télécharger ou faites glisser et déposez",
       "documentsubtitle": "PDF, DOC, DOCX ou image jusqu'à 2 Mo",
       "documenterror": "Veuillez télécharger vos documents.",
-      "establishment": "Nom de l'établissement",
-      "establishmentplaceholder": "Entrez le nom de l'établissement",
-      "establishment_country": "Pays de l'établissement",
-      "establishment_countryplaceholder": "Entrez le pays de l'établissement",
-      "number_of_employees": "Nombre d'employés",
-      "number_of_employeesplaceholder": "Entrez le nombre d'employés",
-      "max_capital": "Profit estimé",
-      "max_capitalplaceholder": "Entrez le profit estimé",
-      "documentdescription": "Veuillez télécharger un document officiel prouvant que votre petite entreprise ou startup est légitime. Cela peut inclure un certificat d'enregistrement de l'entreprise, un numéro d'identification fiscale ou tout autre document juridique pertinent.",
+      "documentdescription": "Téléchargez un document officiel comme preuve que votre entreprise est légitime. Cela peut inclure un certificat d'enregistrement d'entreprise, un numéro d'identification fiscale ou tout document juridique pertinent.",
       "button1": "Suivant",
       "button2": "Précédent"
     },
-
     "step3": {
-      "title": "Conditions et confirmation",
+      "title": "Conditions et Confirmation",
       "subtitle": "Lisez les conditions et confirmez.",
-      "term1title": "1. Collecte et utilisation des données",
-      "term1content": "En soumettant ce formulaire, vous acceptez la collecte, le traitement et le stockage de vos informations personnelles, y compris mais sans s'y limiter, votre nom, votre adresse e-mail, votre numéro de carte d'identité nationale/passeport et les détails de votre entreprise. Ces informations seront utilisées uniquement à des fins d'identification, de vérification et de communication.",
-      "term2title": "2. Confidentialité et secret",
-      "term2content": "Nous valorisons votre confidentialité. Toutes les données personnelles soumises seront stockées en toute sécurité et ne seront pas partagées avec des tiers sans votre consentement explicite, sauf si requis par la loi ou les autorités réglementaires.",
-      "checkbox": "J'accepte les termes et conditions",
-      "button1": "Suivant",
+      "term1title": "1. Collecte et Utilisation des Données",
+      "term1content": "En soumettant ce formulaire, vous acceptez la collecte, le traitement et le stockage de vos informations personnelles, y compris votre nom, adresse e-mail, numéro d'identification national/passeport et détails de votre entreprise. Ces informations seront utilisées uniquement à des fins d’identification, de vérification et de communication.",
+      "term2title": "2. Confidentialité et Sécurité",
+      "term2content": "Nous respectons votre vie privée. Toutes les données personnelles fournies seront stockées en toute sécurité et ne seront pas partagées avec des tiers sans votre consentement explicite, sauf si requis par la loi.",
+      "checkbox": "J'accepte les conditions générales",
+      "button1": "Confirmer",
       "button2": "Précédent"
     },
     "step4": {
-      "title": "Merci pour votre inscription",
+      "title": "Merci pour Votre Inscription",
       "subtitle1": "Votre demande a été soumise avec succès.",
       "subtitle2": "Nous examinerons votre demande et vous contacterons dès que possible.",
-      "subsubtitle1": "Vérifiez votre e-mail pour des mises à jour sur l'état de votre demande.",
+      "subsubtitle1": "Vérifiez votre e-mail pour les mises à jour sur l'état de votre demande.",
       "subsubtitle2": "Si vous avez des questions, veuillez nous contacter à",
-      "button1": "Page d'accueil",
-      "button2": "Déconnexion"
+      "button1": "Page d'Accueil",
+      "button2": "Contacter le Support"
     },
     "stepsstatus": {
-      "inprogress": "En cours",
+      "inprogress": "En Cours",
       "completed": "Terminé",
-      "pending": "En attente",
-      "orcontinuewith": "ou continuer avec",
-      "google": "Google",
-      "facebook": "Facebook"
-    },
-    
-      "countries": {
-        "DZ": "Algérie",
-        "BH": "Bahreïn",
-        "KM": "Comores",
-        "DJ": "Djibouti",
-        "EG": "Égypte",
-        "IQ": "Irak",
-        "JO": "Jordanie",
-        "KW": "Koweït",
-        "LB": "Liban",
-        "LY": "Libye",
-        "MR": "Mauritanie",
-        "MA": "Maroc",
-        "OM": "Oman",
-        "PS": "Palestine",
-        "QA": "Qatar",
-        "SA": "Arabie Saoudite",
-        "SO": "Somalie",
-        "SD": "Soudan",
-        "SY": "Syrie",
-        "TN": "Tunisie",
-        "AE": "Émirats arabes unis",
-        "YE": "Yémen"
-      }
-    
-    
+      "pending": "En Attente"
+    }
+  },
+  "countries": {
+    "DZ": "Algérie",
+    "BH": "Bahreïn",
+    "KM": "Comores",
+    "DJ": "Djibouti",
+    "EG": "Égypte",
+    "IQ": "Irak",
+    "JO": "Jordanie",
+    "KW": "Koweït",
+    "LB": "Liban",
+    "LY": "Libye",
+    "MR": "Mauritanie",
+    "MA": "Maroc",
+    "OM": "Oman",
+    "PS": "Palestine",
+    "QA": "Qatar",
+    "SA": "Arabie Saoudite",
+    "SO": "Somalie",
+    "SD": "Soudan",
+    "SY": "Syrie",
+    "TN": "Tunisie",
+    "AE": "Émirats Arabes Unis",
+    "YE": "Yémen"
   }
 }

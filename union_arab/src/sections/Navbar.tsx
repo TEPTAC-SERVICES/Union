@@ -13,7 +13,7 @@ const Navbar = () => {
   const t = useTranslations("Navbar");
 
   return (
-    <header className="bg-white dark:bg-gray-800 w-full h-32 z-20 flex items-center justify-between px-12 shadow-sm shadow-muted-foreground">
+    <header className="bg-white dark:bg-gray-800 w-full h-32 z-20 flex items-center justify-between px-12 shadow-sm shadow-muted-foreground fixed">
       <Link href="/">
         <Image
           src="/logo.svg"

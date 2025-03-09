@@ -22,7 +22,7 @@ const Home = () => {
   const locale = useLocale();
   const direction = getLangDir(locale);
   return (
-    <div className=" min-h-screen  bg-white dark:bg-gray-800">
+    <div className=" min-h-screen  bg-white dark:bg-gray-800 pt-32">
       {/* Hero */}
       <div className=" h-auto flex flex-col items-center justify-center py-16 bg-linear-to-r from-[#0E4815]/15 via-[#AF9113]/15 to-[#0E4815]/15 relative gap-12 text-center">
         <Image

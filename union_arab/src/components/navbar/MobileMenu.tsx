@@ -52,7 +52,7 @@ export const MobileMenu = ({
 
   return (
     <div className={className} >
-      <Sheet open={open} onOpenChange={setOpen} >
+      <Sheet open={open} onOpenChange={setOpen}  >
         <SheetHeader className='hidden'>
           <SheetTitle>
             navbar mobile
@@ -62,7 +62,7 @@ export const MobileMenu = ({
             <Menu className="h-6 w-6" />
            
         </SheetTrigger>
-        <SheetContent side={direction === 'ltr' ? "right" : "left"} className="w-full sm:w-80 pt-12 flex flex-col bg-white dark:bg-gray-800 px-5" dir={direction}>
+        <SheetContent side={direction === 'ltr' ? "right" : "left"} className="w-full sm:w-full pt-12 flex flex-col overflow-y-scroll bg-white dark:bg-gray-800 px-5" dir={direction}>
           
 
           {/* Mobile Navigation */}
